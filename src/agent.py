@@ -21,10 +21,15 @@ def search_for_complexed_terms_definition(terms: list[str]) -> dict:
 	Returns:
 		dict of term definitions
 	"""
+	print(f"Searching for definitions of the following terms: {terms}")
 	term_definitions = {}
 	matches = df[df["Term"].isin(terms)]
-	for _, row in matches.iterrows():
-		term_definitions[row["Term"]] = row["Definition"]
+	for term in terms:
+		if term in matches["Term"].values:
+			row = matches[matches["Term"] == term].iloc[0]
+			term_definitions[term] = row["Definition"]
+		else:
+			term_definitions[term] = f"Definition not found for term: {term}"
 	return term_definitions
 
 class Summary(BaseModel):
@@ -35,15 +40,14 @@ def create_bio_section_summarizer(section_content: str):
 	bio_section_summarizer = Agent(
 	name="BioSectionSummarizer",
 	model=mistral,
-	context={"section_content": section_content, "terms": df.to_string()},
-	add_context=True,
-	description=AGENT_INSTRUCTION,
+	description=AGENT_INSTRUCTION.format(section_content=section_content),
     tools=[search_for_complexed_terms_definition],
 	response_model=Summary,
     structured_outputs=True,
 	markdown=True,
     stream=True
     )
+	print(bio_section_summarizer.description)
 	return bio_section_summarizer
 	
 def summarize_section(section_content: str, output_dir: str, target_title: str):
