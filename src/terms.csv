@@ -1,0 +1,836 @@
+﻿Term,Definition
+Sequence Alignment,"The process of arranging two or more biological sequences (DNA, RNA, or protein) to identify regions of similarity that may indicate functional, structural, or evolutionary relationships."
+Multiple Sequence Alignment (MSA),An extension of sequence alignment where three or more sequences are aligned simultaneously to reveal conserved regions across a set of related sequences.
+BLAST,Basic Local Alignment Search Tool; a heuristic algorithm and program for rapidly comparing a query sequence against a database to find regions of local similarity.
+k-mer,"A subsequence of length k extracted from a biological sequence. k-mers are used in various analyses such as genome assembly, sequence comparison, and error correction."
+de Bruijn Graph,"A graph data structure used in genome assembly where nodes represent (k–1)-mers and edges represent k-mers, enabling efficient reconstruction of sequences from overlapping substrings."
+Hidden Markov Model (HMM),"A statistical model with hidden states and observable emissions, commonly used in bioinformatics for sequence analysis tasks such as gene prediction and protein family modeling."
+Genome Assembly,The computational process of reconstructing a complete genome sequence from shorter sequencing reads by identifying overlaps and organizing reads into contigs and scaffolds.
+Variant Calling,The process of identifying genetic variants (such as SNPs and indels) in sequencing data by comparing aligned reads to a reference genome.
+RNA-Seq,A high-throughput sequencing technique that quantifies and profiles the transcriptome by converting RNA into cDNA and sequencing it to measure gene expression levels.
+ChIP-Seq,"Chromatin immunoprecipitation followed by sequencing; a method to identify DNA binding sites of proteins (e.g., transcription factors) across the genome by sequencing DNA fragments bound by a specific protein."
+Algorithm,"A series of defined steps or rules for solving a problem, often implemented as a computer program. Bioinformatics algorithms are used to process and analyze biological data."
+Alpha helix,"A common secondary structure of proteins, characterized by a right-handed coil stabilized by hydrogen bonds between backbone N–H and C=O groups four residues apart."
+AlphaFold,An artificial intelligence system developed by DeepMind that predicts a protein’s 3D structure from its amino acid sequence with high accuracy.
+Alternative splicing,"A regulated process during gene expression whereby a single gene can lead to multiple mRNA transcripts by including or excluding certain exons, allowing one gene to code for multiple protein isoforms."
+Amino acid,"One of the 20 (or more) building blocks of proteins, consisting of an amino group, a carboxyl group, and a specific side chain; amino acids are linked by peptide bonds to form polypeptide chains."
+Annotation,"The addition of descriptive information to raw biological sequences; in genomics, annotation involves identifying genes and features in DNA sequences and attaching information about their function, structure, and regulation."
+Beta sheet,"A secondary structure element of proteins consisting of beta strands connected laterally by hydrogen bonds, forming an extended, often slightly twisted, sheet-like arrangement."
+Bioinformatics,"The field of science that involves the collection, organization, and analysis of large biological datasets using computation and databases. It combines biology, computer science, and statistics to interpret data such as DNA sequences or protein structures."
+BLAST,"The Basic Local Alignment Search Tool, a widely used bioinformatics program and algorithm for finding regions of local similarity between sequences. BLAST compares a query DNA or protein sequence against a database to identify sequences that resemble the query."
+cDNA (complementary DNA),"DNA synthesized from an mRNA template via reverse transcriptase. cDNA contains exons (coding regions) without introns, and a cDNA library represents the expressed genes (transcriptome) of a cell."
+Chromosome,"A long DNA molecule that contains part or all of an organism’s genetic material. In eukaryotes, chromosomes are linear and housed in the nucleus, often tightly coiled around proteins. A chromosome carries many genes and regulatory elements."
+Contig,"In genome assembly, a contig is a contiguous stretch of DNA sequence assembled from overlapping sequencing reads. Contigs represent longer consensus sequences without gaps, which can be further linked into scaffolds."
+CRISPR,"CRISPR-Cas9 is a genome editing technology derived from a bacterial defense system. It enables precise editing of DNA by using a guide RNA to direct the Cas9 nuclease to a specific sequence, where Cas9 creates a double-strand break."
+Cryo-electron microscopy (cryo-EM),"An electron microscopy technique in which biological samples are flash-frozen and imaged at cryogenic temperatures, allowing determination of high-resolution 3D structures of biomolecules in a state close to their native environment."
+DNA (deoxyribonucleic acid),"The molecule that carries genetic information in almost all organisms, composed of two antiparallel strands of nucleotides forming a double helix, with complementary base pairing between A–T and G–C."
+DNA methylation,"An epigenetic modification involving the addition of a methyl group to a DNA nucleotide (typically at cytosine bases in CpG dinucleotides), which can alter gene expression, often silencing genes when present in promoter regions."
+Differential gene expression,"The phenomenon and analysis of genes showing different expression levels under different conditions (e.g., healthy vs. diseased), identifying genes that are statistically significantly up-regulated or down-regulated between experimental groups."
+Enrichment analysis,"A statistical method used to determine whether a defined set of genes or proteins shows significant overlap with predefined categories (such as pathways or Gene Ontology terms) beyond what would be expected by chance, helping identify biological themes in a gene list."
+Epigenomics,"The study of the complete set of epigenetic modifications across the genome, including chemical modifications to DNA and histone proteins that regulate gene activity without altering the DNA sequence."
+Exome sequencing (WES),"A genomic technique for sequencing all the protein-coding regions of genes in a genome, capturing and sequencing only exons (~1–2% of the genome) to identify genetic variants in coding regions."
+FASTA format,"A text-based format for representing nucleotide or protein sequences in which each record starts with a '>' header line containing an identifier or description, followed by lines of the sequence."
+FASTQ format,"A text-based sequence format that extends FASTA by including quality scores for each base. Each record consists of four lines: a header beginning with '@', the raw sequence, a '+' line, and a line of Phred quality scores."
+Flux balance analysis (FBA),"A mathematical modeling approach for analyzing metabolite flows through a metabolic network under steady-state conditions, using a stoichiometric model and linear optimization to predict reaction fluxes that optimize a given objective."
+Gene,"A unit of heredity defined as a segment of DNA that encodes a functional product (usually a protein or functional RNA), together with its regulatory sequences."
+Gene Ontology (GO),"A structured, controlled vocabulary for describing gene and gene product attributes across species in three domains (Biological Process, Molecular Function, Cellular Component), providing a framework for consistent annotation and enrichment analysis."
+Gene regulatory network (GRN),"A network model of DNA segments, transcription factors, and other regulators that interact to control gene and protein expression levels, where nodes represent genes or regulators and edges represent regulatory interactions."
+Genome,"The complete genetic content of an organism—the entire DNA sequence (or RNA in some viruses) of all its chromosomes, encompassing both coding and noncoding regions."
+Genome assembly,The computational process of reconstructing the original genome sequence from sequencing reads by identifying overlaps and organizing reads into contiguous sequences (contigs) and scaffolds.
+Genome-wide association study (GWAS),"A research approach that scans genomes of many individuals to identify genetic variants (e.g., SNPs) statistically associated with a specific trait or disease by testing hundreds of thousands to millions of variants."
+Genomics,"The comprehensive analysis of an organism’s entire genome, using high-throughput sequencing and bioinformatics tools to study gene content, structure, function, and interactions."
+Hidden Markov Model (HMM),"A statistical model for sequence analysis that assumes an underlying process with hidden states generating observable outputs, characterized by transition probabilities between states and emission probabilities for observations."
+Homology,"The relationship between sequences that share a common evolutionary ancestor; in practice, high sequence similarity is taken as evidence that two genes or proteins are homologous."
+Homology modeling,A computational method for predicting a protein’s three-dimensional structure by aligning its amino acid sequence to one or more homologous proteins of known structure and building a model based on that alignment.
+Indel (Insertion/Deletion),"A genetic variant involving the insertion or deletion of one or more nucleotides in a DNA sequence, which can range from a single base to larger segments and may cause frameshifts in coding regions."
+Isoform,"One of multiple different forms of the same protein (or RNA) produced from a single gene, often arising from alternative splicing, alternative start codons, or other variations, with potentially distinct functions or localization."
+Machine learning,"A branch of artificial intelligence where algorithms learn patterns from data and improve performance on tasks without explicit programming, including methods like regression, decision trees, and neural networks."
+Mass spectrometry (MS),"An analytical technique measuring the mass-to-charge ratio of ions to identify and quantify molecules; in proteomics, it determines peptide fragment masses to identify proteins and post-translational modifications."
+Metabolomics,"The large-scale study of metabolites (small molecules) in cells, tissues, or organisms, aiming to profile the metabolome under specific conditions using techniques like mass spectrometry and NMR."
+Metagenomics,"The study of genetic material recovered directly from environmental or clinical samples to analyze the collective genomes of microbial communities, using shotgun or amplicon sequencing without the need for culturing."
+Microarray,"A laboratory tool (DNA microarray or gene chip) with thousands of DNA probes fixed on a surface, used to measure gene expression levels or genotype multiple regions simultaneously by hybridizing labeled sample cDNA or DNA and detecting signal intensity."
+Microbiome,"The community of microorganisms (bacteria, archaea, fungi, viruses, etc.) in a particular environment and their collective genetic material, such as the human gut microbiome which comprises all microbes living in the gastrointestinal tract."
+Neural network,"A computational model inspired by the brain’s neural architecture, consisting of interconnected layers of nodes (‘neurons’) that process input data and learn complex patterns through training, especially deep networks with many layers."
+Next-generation sequencing (NGS),"A suite of high-throughput DNA sequencing technologies (e.g., Illumina, Ion Torrent, PacBio, Oxford Nanopore) that sequence millions to billions of fragments in parallel, greatly increasing speed and reducing cost compared to Sanger sequencing."
+NMR spectroscopy,"Nuclear Magnetic Resonance spectroscopy, which uses the magnetic properties of atomic nuclei to determine molecular structure and dynamics, often employed in structural biology to elucidate 3D structures and motions of proteins or nucleic acids in solution."
+Open reading frame (ORF),"A stretch of DNA sequence that could potentially encode a protein, starting with a start codon (e.g., ATG) and ending with a stop codon, without any stops in between."
+Ortholog,"A type of homologous gene where two genes in different species evolved from a common ancestral gene via speciation, typically retaining similar functions across species."
+Paralog,"A type of homologous gene that arises by duplication within the same genome, where the duplicated copies often evolve new or specialized functions over time."
+Polymerase Chain Reaction (PCR),"A laboratory technique used to amplify a specific DNA segment through repeated cycles of denaturation, primer annealing, and extension by a heat-stable DNA polymerase."
+Pharmacogenomics,"The study of how an individual’s genetic makeup affects their response to drugs, combining pharmacology and genomics to personalize medicine by tailoring drug choice and dosage."
+Phylogenetic tree,"A branching diagram representing inferred evolutionary relationships among biological entities (e.g., species or genes) based on their similarities and differences."
+Phylogenetics,"The study of evolutionary relationships among organisms or genes using molecular sequence data (and sometimes morphological data) to construct phylogenetic trees, inferring lineage divergences and common ancestry."
+Primer,"A short single-stranded DNA (or RNA) oligonucleotide that provides a starting point for DNA synthesis; in PCR or sequencing, primers bind to complementary sequences on the template and enable DNA polymerase to initiate extension."
+Proteomics,"The large-scale study of the proteome—the entire set of proteins expressed by a cell, tissue, or organism—focusing on identifying, quantifying, and analyzing proteins, including their structures, functions, and modifications."
+Protein,"A large biomolecule composed of one or more long chains of amino acids that fold into specific three-dimensional structures to perform a vast array of functions in organisms, such as enzymes, receptors, and structural fibers."
+Protein Data Bank (PDB),"The worldwide repository of experimentally determined three-dimensional structures of biological macromolecules; the PDB archive stores and provides coordinates for proteins, nucleic acids, and complexes solved by techniques like X-ray crystallography, NMR, and cryo-EM."
+Reference genome,"A digital DNA sequence assembly that serves as a representative example of a species’ genome, used as a standard for aligning sequencing reads and comparing genomic variations, often derived from one or several individuals."
+RMSD (Root-Mean Square Deviation),"A measure of the average distance between atoms of superimposed structures, calculated as the square root of the mean of the squared distances between corresponding atoms after optimal alignment."
+RNA (ribonucleic acid),"A nucleic acid polymer consisting of ribonucleotides (adenine, cytosine, guanine, uracil), typically single-stranded, in forms such as mRNA, tRNA, and rRNA, each playing roles in gene expression and regulation."
+RNA sequencing (RNA-Seq),"A high-throughput sequencing technique that captures and quantifies the transcriptome by converting RNA to cDNA and sequencing it, revealing gene expression levels and detecting alternative splicing and novel transcripts."
+Sanger sequencing,"A first-generation DNA sequencing method that uses chain-terminating dideoxynucleotides during DNA replication to produce fragments of varying lengths, which are then resolved to infer the sequence."
+Scaffold,"In genome assembly, a scaffold is a sequence of contigs that are ordered and oriented relative to each other, with gaps in between that could not be sequenced, built using linking information (e.g., paired-end or long reads) to span these gaps."
+Sequence alignment,"An arrangement of two or more nucleotide or amino acid sequences to highlight regions of similarity, often introducing gaps to optimize matches and infer homology, evolutionary relationships, or conserved functional sites."
+Single-cell sequencing,"A collection of techniques to analyze genomic, transcriptomic, or other molecular information at the level of individual cells, uncovering cellular heterogeneity masked in bulk samples."
+Single nucleotide polymorphism (SNP),"A variation at a single nucleotide position in the genome present at a measurable frequency in a population, serving as common genetic markers and sometimes associated with traits or diseases."
+Structural variant (SV),"A large genomic alteration (≥50 base pairs) such as insertions, deletions, duplications, inversions, or translocations of DNA segments, which can affect gene function or regulation by altering large regions of the genome."
+Synthetic biology,"An interdisciplinary field that combines biology and engineering to design and construct new biological parts, devices, and systems, or to redesign existing biological systems for useful purposes."
+Systems biology,"An interdisciplinary field that focuses on complex interactions within biological systems, using holistic computational and mathematical modeling of biological networks to understand how system-level properties arise from component interactions."
+Toxicogenomics,"A field that examines how genomes and their expression products respond to exposure to toxic substances, integrating genomics, transcriptomics, proteomics, and metabolomics to understand genetic responses to environmental stressors."
+Transcriptomics,The study of the transcriptome—the complete set of RNA transcripts produced by the genome under specific conditions—using methods like RNA-Seq or microarrays to quantify gene expression and characterize transcript types.
+Variant calling,The process of identifying genetic variants (such as SNPs and indels) from sequencing data by comparing aligned reads to a reference genome and detecting differences in the sequence.
+Whole-genome sequencing (WGS),"Determining the complete DNA sequence of an organism’s genome at a single time by sequencing all chromosomal DNA, providing a comprehensive view of both genes and noncoding regions."
+X-ray crystallography,An experimental technique that determines the three-dimensional structure of molecules by measuring X-ray diffraction patterns from a crystallized sample and using the resulting electron density map to build an atomic model.
+Amino acid,"An organic molecule composed of an amino group and a carboxyl group, serving as the basic building block of proteins."
+Nucleic acids,Biological macromolecules (DNA and RNA) made of nucleotides linked in polymers that carry and transmit genetic information.
+PCR (Polymerase Chain Reaction),"An enzymatic technique for exponential amplification of a specific DNA sequence using primers, thermal cycling, and a heat‐stable DNA polymerase."
+DNA,"Deoxyribonucleic acid: the molecule that carries genetic information, structured as a double helix of nucleotides."
+cDNA (complementary DNA),"DNA synthesized from an mRNA template by reverse transcription, containing only exons (coding regions)."
+Circular DNA,"A DNA molecule whose 5′ and 3′ ends are covalently linked to form a circle, as found in bacterial plasmids."
+Hybrid DNA,A double‐stranded DNA helix formed from two strands originating from different sources or non‐identical complementary sequences.
+DNA polymerase,An enzyme that catalyzes the synthesis of DNA by adding nucleotides to the 3′ end of a primer annealed to a template strand.
+Recombinant DNA,An artificially engineered DNA molecule created by combining genetic material from multiple sources using restriction enzymes and ligase.
+Satellite DNA,"Short, tandemly repeated DNA sequences often located in centromeric and heterochromatic regions of the genome."
+Alignment,"The process of arranging two or more biological sequences to identify regions of similarity, often introducing gaps to optimize matching."
+Allele,"A variant form of a gene at a specific locus, responsible for different versions of a trait."
+Alu sequence,A family of short (~300 bp) mobile elements (SINEs) present in high copy number throughout the human genome.
+Primer,A short synthetic oligonucleotide that provides a starting point for DNA or RNA synthesis by a polymerase.
+Linkage analysis,A genetic study that measures the co‐segregation of markers with traits to estimate genetic distances between loci.
+Annotation,"The process of identifying and describing functional (genes, exons, promoters) and structural elements within a biological sequence."
+Antisense,"A strand of RNA or DNA complementary to the coding (sense) strand, often used to regulate or inhibit gene expression."
+Apoptosis,"Programmed cell death characterized by chromatin condensation, DNA fragmentation, and formation of apoptotic bodies."
+Base pairing,"The association of complementary nucleotide bases (A–T, G–C in DNA; A–U, G–U in RNA) via hydrogen bonds in double‐stranded nucleic acids."
+RNA,Ribonucleic acid: a polymer of ribonucleotides that carries genetic information and plays various roles in gene expression and regulation.
+Messenger RNA (mRNA),"A type of RNA that conveys genetic information from DNA to the ribosome, where it serves as a template for protein synthesis."
+Ribosomal RNA (rRNA),"RNA molecules that are structural and functional components of the ribosome, catalyzing peptide bond formation and ensuring the correct alignment of mRNA and tRNAs."
+Transfer RNA (tRNA),Small RNA molecules that deliver specific amino acids to the ribosome during translation by recognizing codons on the mRNA via their anticodon loop.
+Precursor RNA (premessenger RNA),"The initial RNA transcript synthesized from a DNA template (pre-mRNA) that contains both introns and exons and must be processed (capping, splicing, polyadenylation) to form mature mRNA."
+RNA polymerase,An enzyme that synthesizes RNA from a DNA template during transcription by adding ribonucleotides complementary to the DNA template strand.
+BAC (Bacterial Artificial Chromosome),"A large cloning vector based on a bacterial fertility plasmid, used to stably propagate DNA fragments (100–300 kb) in bacterial cells for genome mapping and sequencing."
+Database,"An organized collection of structured data, stored electronically and designed for efficient retrieval, querying, and analysis of biological information."
+Bioinformatics,"The application of computational methods and software tools to store, analyze, and interpret biological data such as DNA sequences, protein structures, and gene expression profiles."
+Biochip,"A miniaturized device that integrates multiple biological assays on a single chip, for example DNA microarrays used in high-throughput gene expression analysis."
+Biotechnology,"The use of living organisms, cells, or their components to develop technologies and products for applications in medicine, agriculture, and industry."
+Gap,"A region of unknown or missing sequence between contigs in a genome assembly, often spanned later by additional sequencing or long-read data."
+Box,"A short, conserved sequence motif in DNA or RNA that has a specific regulatory or structural function, such as the TATA box in eukaryotic promoters."
+Bootstrap,A statistical method for assessing the reliability of phylogenetic trees by repeatedly resampling the data and calculating the frequency at which given groupings (clades) appear.
+CAAT box,A conserved DNA sequence motif (GGCCAATCT) found in the promoter region of many eukaryotic genes that helps recruit transcription factors and RNA polymerase II.
+Open reading frame (ORF),"A continuous stretch of codons in DNA or RNA that begins with a start codon and ends with a stop codon, representing a potential protein‐coding region."
+Cap,A modified 7-methylguanosine structure added to the 5′ end of eukaryotic mRNA that protects the transcript from degradation and promotes translation initiation.
+Map,"An ordered representation of genomic features—such as genes, markers, or restriction sites—showing their relative positions along a chromosome or DNA molecule."
+Linkage map,"A genetic map based on the frequency of recombination between markers, measured in centimorgans, to infer their linear order and distances."
+Restriction map,A diagram showing the locations of specific restriction enzyme recognition sites within a DNA molecule.
+Genetic map,A map that shows the relative positions of genes or markers on chromosomes based on recombination frequencies.
+Radiation hybrid map,A high‐resolution map of genomic markers created using radiation‐induced chromosome breakage and cell‐fusion hybrids to determine marker order and distances.
+Physical map,"A map that shows the actual physical distances between genomic features, usually measured in base pairs."
+Karyotype,"The number, size, and shape of chromosomes in a cell, often visualized during metaphase to detect chromosomal abnormalities."
+Coding sequence (CDS),"The portion of a gene’s DNA or RNA that is translated into protein, from the start codon to the stop codon."
+Centimorgan (cM),A unit of genetic distance corresponding to a 1% chance of recombination occurring between two loci during meiosis.
+Centiray (cR),"A unit of distance used in radiation hybrid mapping, representing the frequency of radiation‐induced breakpoints between markers."
+Centromere,The constricted region of a chromosome where sister chromatids are held together and where the kinetochore assembles during cell division.
+Hidden Markov model (HMM),"A statistical model that represents systems with hidden states emitting observable signals, widely used for sequence alignment, gene prediction, and protein family modeling."
+Combinatorial chemistry,A technique for rapidly synthesizing and screening large libraries of chemical compounds in parallel to identify molecules with desired biological activities.
+Chromatid,"One of the two identical copies of a replicated chromosome, joined at the centromere until separated during cell division."
+Chromatin,The complex of DNA and histone proteins that packages chromosomes within the nucleus and regulates gene expression and DNA replication.
+Chromosome,"A linear or circular DNA molecule, along with associated proteins, that carries genes and regulatory elements within the cell nucleus or nucleoid."
+Cistron,"A functional unit of genetic material equivalent to a gene, defined by the smallest DNA segment that can be mutated to cause a change in phenotype."
+Clade,"A group of organisms or genes that includes an ancestor and all its descendants, representing a single branch on a phylogenetic tree."
+Cladistic,Referring to a method of classification based on the identification of shared derived characteristics and the construction of phylogenetic trees (cladograms).
+Cladogram,A branching diagram that represents the hypothesized evolutionary relationships among taxa based on shared derived characters.
+Cloning,"The process of creating identical copies of a DNA fragment, cell, or organism through molecular or cellular techniques."
+Clone,"An identical copy of a DNA fragment, cell line, or organism produced by cloning."
+Cosmid,"A hybrid plasmid vector that contains cos sites from lambda phage, capable of carrying large DNA inserts (up to ~45 kb) for genomic library construction."
+CpG islands,"Regions of DNA with a high frequency of CpG dinucleotides, often located near gene promoters and associated with gene regulation via methylation."
+Screening,"The process of testing a library of clones, chemicals, or genetic variants to identify those with a desired property or phenotype."
+X-ray crystallography,An experimental method for determining the three-dimensional structures of molecules by analyzing the diffraction patterns of X-rays passed through a crystalline sample.
+Crossing-over,"The exchange of genetic material between homologous chromosomes during meiosis, leading to new allele combinations in gametes."
+Cybernetics,"The interdisciplinary study of control and communication in biological, mechanical, and electronic systems."
+Deletion,"A type of genetic variant in which a segment of DNA is missing or removed from a chromosome, which can range from a single base pair to large genomic regions."
+Linkage disequilibrium,"The non-random association of alleles at two or more loci, where certain allele combinations occur more or less frequently in a population than expected by chance."
+Enzymatic digestion,The process of cleaving DNA at specific sites using restriction enzymes or other nucleases to generate fragments for cloning or analysis.
+Central dogma,The framework of molecular biology describing the flow of genetic information from DNA to RNA (transcription) and from RNA to protein (translation).
+Domain,"A distinct structural or functional region of a protein, often able to fold independently and associated with a specific activity or interaction."
+Two-hybrid system,A molecular biology technique used to detect protein–protein interactions by reconstituting a functional transcription factor from two separate fusion proteins in yeast or other hosts.
+Duplication,"A genetic event in which a region of DNA is copied one or more times, resulting in multiple copies of that segment in the genome."
+Electrophoresis,"A technique that uses an electric field to separate charged molecules (such as DNA, RNA, or proteins) by size and charge through a gel matrix."
+Endonuclease,"An enzyme that cleaves the phosphodiester bonds within a nucleic acid chain, cutting DNA or RNA at internal sites."
+Enhancer,"A cis‐regulatory DNA element that can increase the transcription of target genes, often functioning at a distance and in an orientation‐independent manner."
+Enzyme,"A biological catalyst, typically a protein, that accelerates specific chemical reactions in the cell without being consumed."
+Restriction enzyme,"An endonuclease that recognizes and cuts DNA at specific short nucleotide sequences, producing defined fragments."
+Epidemiology,"The study of the distribution, determinants, and control of health and disease conditions in populations."
+Epigenetic,"Referring to heritable changes in gene expression or cellular phenotype that do not involve alterations in the DNA sequence, often mediated by DNA methylation or histone modifications."
+Episome,"A genetic element, such as a plasmid or viral genome, that can exist either as an independent molecule in the cytoplasm or integrated into the host genome."
+RNA splicing,The process by which introns are removed and exons are joined together in a pre‐mRNA transcript to form mature messenger RNA.
+Species,"The basic taxonomic unit, defined as a group of organisms capable of interbreeding and producing fertile offspring, sharing a common gene pool."
+Expressed Sequence Tag (EST),A short sub‐sequence of a cDNA clone used to identify gene transcripts and map their positions in the genome.
+Gene tagging,"A technique to attach a detectable marker (such as GFP or an epitope tag) to a gene or its product for localization, purification, or functional studies."
+Association study,"A statistical approach to identify correlations between genetic variants and traits or diseases in a population, such as genome‐wide association studies (GWAS)."
+Eukaryote,"An organism whose cells contain a true nucleus and membrane‐bound organelles, including animals, plants, fungi, and protists."
+Euchromatin,Loosely packed chromatin that is transcriptionally active and accessible to regulatory proteins.
+Extrachromosomal,"Referring to DNA elements or genetic material that exist outside the main chromosomal genome, such as plasmids or viral genomes."
+Exon,A coding segment of a gene that remains in the mature mRNA after RNA splicing and may be translated into protein.
+Gene expression,"The process by which information from a gene is used to synthesize functional gene products (RNA or proteins), encompassing transcription, RNA processing, and translation."
+Transcription factor,A protein that binds to specific DNA sequences to regulate the transcription of genetic information from DNA to mRNA.
+Fingerprint,"A unique pattern generated from molecular markers (e.g., DNA fragments) used to identify genetic variation among individuals or samples."
+FISH (Fluorescence In Situ Hybridization),A cytogenetic technique that uses fluorescent probes to detect and localize specific DNA or RNA sequences on chromosomes or in cells.
+Gene function,"The biological role of a gene product (RNA or protein) in cellular processes, such as enzymatic activity, regulation, or structural support."
+Format,"The structure or arrangement of data in a file or record, defining how information is organized and represented."
+Gap,A region of missing or unknown sequence between contigs in a genome assembly.
+Gene,"A segment of DNA that encodes a functional product, such as a protein or RNA."
+Genetics,"The study of heredity and variation in organisms, focusing on genes and their roles in traits."
+Genetic engineering,The direct manipulation of an organism’s genes using biotechnology to alter its characteristics.
+Genome,"The complete set of genetic material in an organism, including all of its genes and noncoding sequences."
+Genomics,"The study of genomes, involving the sequencing, analysis, and comparison of an organism’s complete DNA."
+Functional genomics,"The study of gene functions and interactions on a genome-wide scale, often using high-throughput assays."
+Structural genomics,The systematic study of three-dimensional structures of proteins encoded by a genome.
+Genotyping,The process of determining the genetic variants (alleles) present in an individual’s genome.
+Genotype,"The genetic constitution of an organism, representing the specific alleles it carries."
+Glycosylation,"The enzymatic attachment of sugar moieties to proteins or lipids, affecting their stability and function."
+Linkage group,A set of genes or genetic markers located on the same chromosome that tend to be inherited together.
+Heredity,The transmission of genetic traits from parents to offspring through genes.
+Heterochromatin,A tightly packed form of chromatin that is transcriptionally inactive and enriched in repetitive DNA sequences.
+Heuristics,Approximate algorithms or rules of thumb used to find good-enough solutions quickly when exact methods are infeasible.
+Hidden Markov model (HMM),"A statistical model with hidden states emitting observable outputs, widely used for sequence analysis, gene prediction, and modeling protein families."
+Homeobox,"A conserved 180-base-pair DNA sequence that encodes the homeodomain, found in transcription factors that regulate development."
+Homeodomain,A ~60–amino-acid protein domain encoded by the homeobox that binds specific DNA sequences to control gene expression during development.
+Homeogene,A gene containing a homeobox sequence that encodes a transcription factor involved in regulating developmental processes.
+Homeostasis,The maintenance of stable internal physiological conditions in an organism despite external changes.
+Homeotic,"Referring to genes or mutations that cause one body part to develop as another, often due to misexpression of homeobox genes."
+Homology,Similarity between sequences or structures due to shared evolutionary ancestry.
+Hybridization,"The pairing or annealing of complementary nucleic acid strands (DNA–DNA, DNA–RNA) under appropriate conditions."
+Radiation hybrids,"Cell lines created by fusing irradiated donor cells with recipient cells, used to map genetic markers based on retention patterns."
+Monochromosomal somatic hybrids,"Somatic cell hybrid lines that retain only a single chromosome (or chromosome fragment) from the donor, used for high-resolution mapping."
+Identity,"The proportion of identical residues (nucleotides or amino acids) in an alignment between two sequences, indicating similarity."
+Insert,A DNA fragment that is introduced into a vector or genome during cloning or genetic engineering.
+Insertion,A type of mutation in which one or more nucleotides are added into a DNA sequence.
+Integration,"The incorporation of foreign DNA into a host genome, often mediated by recombination or transposases."
+Linkage interval,"A region of a chromosome between two genetic markers within which a gene of interest is expected to lie, based on recombination data."
+Intron,A non-coding intervening sequence within a gene that is transcribed into pre-mRNA but removed by splicing before translation.
+Inversion,A chromosomal rearrangement in which a segment of DNA is flipped in orientation within the genome.
+Isochore,"A large, compositionally homogeneous region of genomic DNA with a characteristic GC content distinct from flanking regions."
+Linkage,The tendency of genetic loci that are physically close on a chromosome to be inherited together due to reduced recombination between them.
+Covalent bond,"A strong chemical bond formed by the sharing of one or more pairs of electrons between atoms, such as the phosphodiester bonds in the DNA backbone."
+Weak non-covalent bond,"A reversible, low-energy interaction between molecules or molecular regions, including hydrogen bonds, ionic interactions, van der Waals forces, and hydrophobic effects."
+LINE (Long Interspersed Nuclear Element),"A class of autonomous retrotransposons in eukaryotic genomes that can copy and insert themselves via an RNA intermediate, often several thousand base pairs in length."
+Locus,"A specific, fixed position on a chromosome where a gene or genetic marker is located."
+Hidden Markov model (HMM),"A statistical model with hidden states that emit observable outputs, used for sequence analysis tasks such as gene prediction and protein family characterization."
+Genetic marker,"A specific DNA sequence or locus with a known location on a chromosome, used to track inheritance of traits or for linkage mapping."
+Molecular processing,"The series of enzymatic and chemical modifications that biomolecules (RNA, proteins, etc.) undergo to become functionally mature."
+Substitution matrix,A scoring matrix used in sequence alignment that assigns values to amino acid or nucleotide substitutions based on evolutionary likelihood.
+RNA processing,"The set of modifications that a pre-mRNA transcript undergoes—such as capping, splicing, and polyadenylation—to become mature mRNA."
+Drug,"A chemical substance used to prevent, diagnose, or treat diseases by affecting biological processes."
+Meiosis,"A specialized type of cell division that reduces the chromosome number by half, producing four haploid gametes from one diploid cell."
+Mismatch,"A non-canonical pairing between nucleotides (e.g., G–T in DNA) that can arise during replication or alignment."
+Metabolite,A small molecule intermediate or end product of metabolic pathways within cells.
+Metabolism,The collection of biochemical reactions in a living organism that convert nutrients into energy and building blocks for growth and maintenance.
+Metabolome,"The complete set of metabolites present within a cell, tissue, or organism at a given time."
+DNA methylation,"An epigenetic modification in which a methyl group is added to a cytosine base in DNA, often affecting gene expression."
+"Microsatellite (short tandem repeat, STR)","A DNA sequence composed of repeating units of 1–6 base pairs, used as genetic markers due to high polymorphism."
+Minisatellite,"A DNA region consisting of longer tandem repeat units (10–60 base pairs), often found in telomeres and used in genetic fingerprinting."
+Mitosis,The process of cell division in which a single cell divides to produce two genetically identical daughter cells.
+Protein post-translational modifications,"Chemical modifications made to a protein after translation—such as phosphorylation, glycosylation, or ubiquitination—that regulate its function and localization."
+Motif,"A short, conserved sequence pattern in DNA or protein that has a specific biological function, such as binding or catalytic activity."
+Site-directed mutagenesis,A molecular biology technique used to introduce specific nucleotide changes into a DNA sequence to alter protein function.
+Mutation,"A change in the nucleotide sequence of DNA, which can affect gene function and may lead to phenotypic variation or disease."
+Nucleotide,"A molecule consisting of a nitrogenous base, a five-carbon sugar, and one or more phosphate groups, which serves as the basic building block of nucleic acids (DNA and RNA)."
+Oncogene,"A gene that, when mutated or overexpressed, has the potential to cause normal cells to become cancerous."
+Ontology,"A structured, controlled vocabulary that defines concepts and relationships within a domain to enable consistent data annotation and analysis."
+Operator,"A regulatory DNA sequence in prokaryotes to which a repressor protein binds, controlling transcription of adjacent genes."
+Operon,"A cluster of genes transcribed together under the control of a single promoter and regulatory sequences, common in prokaryotic genomes."
+Open reading frame (ORF),"A continuous stretch of codons in a DNA or RNA sequence, beginning with a start codon and ending with a stop codon, potentially encoding a protein."
+Orfeome,"The complete set of open reading frames (ORFs) in a genome, representing all possible protein-coding sequences."
+Orthologs,Genes in different species that originated from a common ancestral gene by speciation and typically retain equivalent functions.
+Palindromic sequence,"A nucleic acid sequence that reads the same in the 5′→3′ direction on one strand and 5′→3′ on the complementary strand, often recognized by restriction enzymes."
+Pattern,"A recurring sequence motif or arrangement of nucleotides or amino acids that has biological significance, such as binding sites or structural features."
+Paralogs,Genes within the same genome that arose by duplication and have diverged to acquire different functions.
+bp (base pair),A unit of measurement in nucleic acids representing one pair of complementary nucleotides (A–T or G–C) in double-stranded DNA.
+PCR (Polymerase Chain Reaction),"A technique to amplify a specific DNA segment by enzymatic replication through repeated cycles of denaturation, annealing, and extension."
+Pedigree,A diagram or record tracing the inheritance of traits or genetic markers through multiple generations of a family.
+Pharmacokinetics,"The study of the absorption, distribution, metabolism, and excretion of drugs within the body over time."
+Pharmacodynamics,The study of the biochemical and physiological effects of drugs and their mechanisms of action on the body.
+Pharmacoeconomy,"The analysis of the cost, benefits, and value of pharmaceutical products and therapies in healthcare systems."
+Pharmacoepidemiology,"The study of the use and effects of drugs in large populations, combining pharmacology and epidemiology to assess safety and efficacy."
+Pharmacogenetics,The study of how individual genetic variation affects drug response and metabolism.
+Pharmacogenomics,The genome-wide analysis of genetic factors that influence an individual’s response to drugs.
+Pharmacology,"The branch of science concerned with the properties, actions, and therapeutic uses of drugs."
+Pharmacovigilance,"The monitoring, assessment, and prevention of adverse effects of pharmaceuticals after they have entered the market."
+Open reading frame (ORF),"A continuous stretch of codons in DNA or RNA beginning with a start codon and ending with a stop codon, representing a potential protein-coding region."
+Phenetic,"An approach to classification based on overall similarity of observable traits or sequences, without regard to evolutionary relationships."
+Phenogram,A tree-like diagram that represents phenetic relationships among organisms or sequences based on similarity metrics.
+Phenotype,The set of observable characteristics or traits of an organism resulting from the interaction of its genotype with the environment.
+Phylogeny,"The evolutionary history and relationships among organisms or genes, often represented as a phylogenetic tree."
+Molecular phylogeny,"The inference of evolutionary relationships using molecular sequence data (DNA, RNA, protein) to construct phylogenetic trees."
+Physiome,"The comprehensive description and integration of an organism’s physiological dynamics and functions, from molecular to whole-organism levels."
+Physiomics,The large-scale study of physiological data and models to understand the integrated function of biological systems.
+Plasmid,"A small, circular, extrachromosomal DNA molecule capable of independent replication in bacteria and used as a cloning vector."
+Pleiotropy,"The phenomenon where a single gene influences multiple, seemingly unrelated phenotypic traits."
+Polyadenylation,"The addition of a poly(A) tail to the 3′ end of a pre-mRNA transcript, important for mRNA stability and export."
+Polymerase,An enzyme that synthesizes nucleic acids by catalyzing the polymerization of nucleotides.
+Polymorphism,The occurrence of two or more genetic variants (alleles) at a locus in a population at appreciable frequency.
+Prion,"An infectious, misfolded protein that induces abnormal folding of normal proteins, leading to neurodegenerative disease."
+Prokaryote,"A unicellular organism lacking a true nucleus and membrane-bound organelles, including bacteria and archaea."
+Promoter,A DNA sequence upstream of a gene where RNA polymerase and transcription factors bind to initiate transcription.
+Protein,A biologically functional molecule composed of one or more polypeptide chains folded into a specific three-dimensional structure.
+Proteome,"The entire set of proteins expressed by a cell, tissue, or organism under specific conditions."
+Proteomics,"The large-scale study of the proteome, including protein identification, quantification, structure, and function."
+Sanger enzymatic protocol,The original DNA sequencing method using chain-terminating dideoxynucleotides and enzymatic incorporation to determine nucleotide order.
+Protooncogene,"A normal gene that can become an oncogene through mutation or overexpression, contributing to cancer development."
+Pseudogene,A nonfunctional DNA sequence resembling a gene that has lost its protein-coding ability or regulatory function.
+Biochip (microarray),"A miniaturized device containing an array of biological probes (e.g., DNA or protein) used for high-throughput analysis of gene expression or interactions."
+QTL,"Quantitative Trait Locus: a genomic region that correlates with variation in a quantitative trait, identified through statistical association between genetic markers and phenotypic measurements."
+RBS (Ribosome Binding Site),"A sequence on mRNA recognized by the ribosome to initiate translation, positioning the start codon in the ribosomal P site."
+RCP (Réaction en Chaîne par Polymérase),"The French term for PCR (Polymerase Chain Reaction), an enzymatic method for exponential amplification of a specific DNA sequence using primers and thermal cycling."
+Recombination,"The process by which genetic material is exchanged between DNA molecules, including homologous recombination and site-specific recombination, creating genetic diversity."
+Control of gene expression,"The regulation of the timing, location, and amount of a gene’s product (RNA or protein) through mechanisms at transcriptional, post-transcriptional, translational, and post-translational levels."
+Replication,"The biological process of copying DNA to produce two identical DNA molecules from one original molecule, ensuring genetic information is passed to daughter cells."
+Threading,A protein structure prediction method that aligns an amino acid sequence onto known 3D protein folds to identify the best structural fit.
+Retrotransposon,"A mobile genetic element that propagates itself in a genome by reverse transcribing its RNA transcript into DNA, which is then inserted at new locations."
+RFLP (Restriction Fragment Length Polymorphism),A technique that detects genetic variation by differences in the lengths of DNA fragments produced by restriction enzyme digestion.
+Ribosome,A large ribonucleoprotein complex composed of rRNA and proteins that translates mRNA into polypeptide chains.
+NMR (Nuclear Magnetic Resonance),"A spectroscopic technique that uses the magnetic properties of atomic nuclei to determine the structure, dynamics, and interactions of molecules, especially proteins and nucleic acids, in solution."
+SAGE method,Serial Analysis of Gene Expression: a technique for high-throughput quantitative analysis of gene expression by sequencing short sequence tags from mRNA transcripts.
+Sanger method,The classical DNA sequencing technique using chain-terminating dideoxynucleotides to generate fragments that reveal the nucleotide sequence.
+Score,A numerical value assigned during sequence alignment or database search indicating the quality or statistical significance of a match.
+Sequence,"An ordered list of nucleotides in DNA or RNA, or amino acids in a protein, representing the primary structure of the molecule."
+Sequencing,The process of determining the exact order of nucleotides in a DNA or RNA molecule.
+Alu sequence,A short (~300 bp) primate-specific SINE (Short Interspersed Nuclear Element) retrotransposon abundant in the human genome.
+Silencer,A cis-regulatory DNA element that binds repressor proteins to decrease transcription of a target gene.
+Similarity,"The degree to which two sequences share identity or conserved substitutions, often measured in alignment algorithms."
+SINE (Short Interspersed Nuclear Element),"A class of non-autonomous retrotransposons, typically 100–400 bp long, that rely on LINE-encoded proteins for mobilization."
+Site,"A specific location in a DNA, RNA, or protein sequence where functional interactions occur, such as binding or cleavage."
+Active site,The region of an enzyme where substrate molecules bind and undergo a chemical reaction.
+Splice site,The boundary sequence at the exon–intron junction in pre-mRNA recognized by the splicing machinery for intron removal.
+Restriction site,A specific short DNA sequence recognized and cut by a restriction enzyme.
+SNP (Single Nucleotide Polymorphism),A variation at a single nucleotide position in the genome present at appreciable frequency in a population.
+Probe,A labeled nucleic acid molecule used to detect complementary DNA or RNA sequences via hybridization.
+Southern blot,A method for detecting specific DNA sequences in a sample by transfer to a membrane and hybridization with a labeled probe.
+Mass spectrometry,An analytical technique that measures the mass-to-charge ratio of ionized molecules to identify and quantify biomolecules.
+Gene structure,"The organization of functional elements within a gene, including promoters, exons, introns, UTRs, and regulatory regions."
+STS (Sequence Tagged Site),"A short, unique DNA sequence with a known location in the genome used as a genetic marker."
+Substitution,A mutation in which one nucleotide or amino acid is replaced by another.
+Conservative substitution,"An amino acid replacement that preserves similar physicochemical properties, minimizing functional disruption."
+Synteny,The conservation of gene order on chromosomes between different species.
+Systematics,"The scientific study of the diversity and relationships of organisms, encompassing taxonomy and phylogenetics."
+Two-hybrid system,A molecular technique to detect protein–protein interactions by reconstituting a functional transcription factor from two fusion proteins.
+Taq polymerase,"A thermostable DNA polymerase isolated from Thermus aquaticus, commonly used in PCR because it withstands the high temperatures needed for DNA denaturation."
+TATA box,A conserved DNA sequence (TATAAA) found about 25–35 base pairs upstream of the transcription start site in eukaryotic promoters that helps recruit transcription factors and RNA polymerase II.
+Taxon,"A named group of organisms at any rank in a biological classification system, such as species, genus, family, etc."
+Taxonomy,"The science of naming, describing, and classifying organisms into groups based on shared characteristics and evolutionary relationships."
+Telomere,"The repetitive nucleotide sequences (e.g., TTAGGG in vertebrates) at the ends of linear chromosomes that protect them from degradation and end-to-end fusion."
+Gene therapy,The experimental technique of correcting or replacing defective genes in a patient’s cells to treat or prevent genetic diseases.
+Threading,A protein structure prediction method that aligns an amino acid sequence onto known three-dimensional protein folds to identify the best structural match.
+Toxicogenomics,"The study of how genomes respond to toxic substances by integrating genomics, transcriptomics, proteomics, and metabolomics to assess toxic effects."
+Translation,The process by which ribosomes synthesize a polypeptide chain using the codon sequence of an mRNA as a template.
+Transcription,The process by which RNA polymerase synthesizes an RNA transcript from a DNA template.
+Transcriptome,The complete set of RNA transcripts produced by the genome of an organism or cell under specific conditions.
+Cell signaling,The complex system of communication that governs basic cellular activities and coordinates cell actions through signaling molecules and receptors.
+Transfection,"The introduction of foreign nucleic acids (DNA or RNA) into eukaryotic cells by chemical, lipid-based, or physical methods."
+Horizontal transfer,"The movement of genetic material between organisms other than by descent, including mechanisms like transformation, transduction, and conjugation."
+Southern blot,A technique for detecting specific DNA sequences by transferring DNA fragments from a gel onto a membrane and hybridizing with a labeled probe.
+Northern blot,A technique for detecting specific RNA sequences by transferring RNA from a gel onto a membrane and hybridizing with a labeled probe.
+Genetic transformation,"The stable incorporation of foreign DNA into an organism’s genome, resulting in heritable genetic change."
+Transgenesis,The process of introducing an exogenous gene (transgene) into an organism’s genome to create a transgenic organism.
+Transgenic,An organism that carries one or more genes that have been artificially introduced from another species or strain.
+Transition,A point mutation in which a purine is replaced by another purine (A↔G) or a pyrimidine is replaced by another pyrimidine (C↔T).
+Translocation,A chromosomal rearrangement in which a segment of one chromosome is transferred to another chromosome.
+Transposon,A mobile genetic element that can move or copy itself to new positions within the genome via a “cut-and-paste” or “copy-and-paste” mechanism.
+Transversion,"A point mutation in which a purine is replaced by a pyrimidine or vice versa (e.g., A↔T or G↔C)."
+UTR (Untranslated Region),"Non-coding sequences at the 5′ or 3′ ends of mRNA that regulate transcript stability, localization, and translation efficiency."
+Cloning vector,"A DNA molecule (such as a plasmid, bacteriophage, or cosmid) used to carry and replicate foreign DNA fragments in a host organism."
+YAC (Yeast Artificial Chromosome),"A large-capacity cloning vector based on yeast chromosomes, capable of carrying DNA inserts of up to ~1 megabase and maintained as linear chromosomes in yeast."
+Active site,The amino acid residues at the catalytic site of an enzyme that bind the substrate and lower the activation energy required for the reaction.
+Adenine,A purine nitrogenous base found in DNA and RNA.
+Agents,"Independent, autonomous software modules that search the Internet for data or content relevant to genes, proteins, or biological systems."
+Agricultural biotechnology (AgBio),The application of recombinant DNA technology to agriculturally important plants and organisms.
+Algorithm,"A stepwise procedure or formula, implementable in code, for processing, analyzing, or predicting biological data."
+Alignment,"The arrangement of two or more gene or protein sequences to identify regions of similarity for inferring homology, function, or evolutionary relationships."
+Allele,A variant form of a gene at a specific chromosomal locus.
+Alternative splicing,The process by which different combinations of exons are joined during mRNA processing to produce multiple protein isoforms from one gene.
+Alternative splice-form,"One of the possible exon combinations produced by alternative splicing, yielding different mRNA and protein products."
+Alu family,"A family of ~300 bp interspersed repeat elements in the human genome, derived from an ancestral 7SL RNA sequence and present in over 500,000 copies."
+Amino acid,"One of the 20 standard building blocks of proteins, each containing an amino group, a carboxyl group, and a side chain."
+Analogy,"Inference of function for a novel sequence by comparison to another sequence of known function, based on similarity."
+Annotation,"Structured notes and metadata describing experimental and inferred information about genes or proteins, often using controlled vocabularies."
+Anticodon,A triplet of nucleotides on tRNA that pairs with the complementary codon on mRNA during translation.
+Antigen,"Any foreign molecule, often a protein, that elicits an immune response in a vertebrate."
+Antisense,"A strand of DNA or RNA complementary to a target sequence, used to block gene expression by hybridizing to mRNA or DNA."
+Assay,"A laboratory method for measuring the presence, quantity, or activity of a biological molecule or process."
+Assembly,The computational process of merging overlapping sequence fragments into longer contiguous sequences.
+Autoradiography,A technique that uses photographic film to detect radioactive emissions from labeled molecules separated in gels or blots.
+Bacterial artificial chromosome (BAC),"A cloning vector based on a bacterial fertility plasmid, capable of carrying large DNA fragments (100–300 kb) for genomic library construction and mapping."
+Bacteriophage,A virus that infects bacteria; phage DNA can be used as a cloning vector and to construct libraries of genomic fragments.
+Baculovirus,An insect virus used as a high-efficiency protein expression system in insect cell culture.
+Base pair,A pair of complementary nitrogenous bases (A–T or G–C in DNA; A–U or G–C in RNA) held by hydrogen bonds that form the rungs of the nucleic acid double helix.
+Beta sheet,"A protein secondary structure formed by laterally packed β-strands connected by hydrogen bonds, creating a twisted, pleated sheet."
+Bioinformatics,"The interdisciplinary field that uses computational tools and databases to collect, organize, analyze, and interpret large-scale biological data."
+Bivalent,"Having two binding sites or two free electrons available for bonding; in genetics, a pair of homologous chromosomes aligned during meiosis."
+Blunt-end (ligation),"The joining of DNA fragments whose ends are fully base-paired, lacking overhangs, requiring direct ligation without complementary single-stranded regions."
+Carboxyl group,"An acidic functional group (-COOH) found in amino acids and organic acids, contributing to pH-dependent ionization and reactivity."
+cDNA (complementary DNA),"DNA synthesized from an mRNA template by reverse transcriptase, representing only the expressed exonic sequences of genes."
+cDNA library,A collection of cDNA clones representing the mRNA transcripts expressed in a particular cell or tissue at a given time.
+Cell,"The basic structural and functional unit of living organisms, bounded by a membrane and containing genetic material and organelles."
+Cell Cycle,"The ordered sequence of phases (G1, S, G2, M) through which a cell grows, duplicates its DNA, and divides."
+Chimeric clone,"An artifact in cloning where two noncontiguous DNA fragments are ligated together in a vector, resulting in a fused sequence."
+Chromat,"A file format produced by DNA sequencers containing fluorescent trace data, base calls, and quality scores for each position."
+Chromatin,The complex of DNA and histone proteins that packages chromosomes within the nucleus and regulates gene accessibility.
+Chromosome,A DNA-protein complex that carries genetic information; linear in eukaryotes and typically circular in prokaryotes.
+Clinical trials,"Research studies involving human participants to assess the safety, efficacy, and optimal usage of new therapies, conducted in phases I–III."
+Clone,A population of genetically identical cells or DNA molecules derived from a single progenitor or template.
+Cloning,"The process of creating identical copies of a DNA fragment, cell, or organism through molecular or reproductive techniques."
+Cluster,A group of similar data points—such as gene expression profiles or sequence motifs—grouped together by computational clustering algorithms.
+Coding regions (CDS),"The portion of a gene’s sequence that is transcribed and translated into protein, bounded by start and stop codons."
+Codon,A triplet of nucleotide bases in mRNA that specifies a single amino acid or a translation stop signal.
+Combinatorial chemistry,A method for synthesizing large libraries of chemical compounds by systematically combining sets of building blocks for high-throughput screening.
+Complementarity determining region (CDR),Hypervariable loops in an antibody’s variable region that form the antigen-binding site and determine specificity.
+Complexity (of gene sequence),A measure of sequence randomness; low-complexity regions have biased composition and can generate misleading alignment scores.
+Configuration,"The arrangement and settings of software or database systems, managed through configuration files and version control."
+Conformation,"The three-dimensional shape of a molecule, determined by bond rotations and spatial arrangement of atoms."
+Consensus sequence,"An idealized sequence derived from multiple alignments, representing the most common nucleotide or amino acid at each position."
+Constitutive synthesis (expression),"Continuous, unregulated transcription and translation of a gene, regardless of environmental conditions."
+Contig,A contiguous sequence assembled from overlapping sequencing reads or fragments in genome assembly projects.
+Convergence,"The state in an iterative algorithm when successive results change by less than a predefined threshold, indicating completion."
+Cosmids,"Hybrid cloning vectors containing cos sites from lambda phage, capable of carrying DNA inserts of up to ~45 kb."
+Crystal structure,A high-resolution three-dimensional model of a molecule determined by X-ray crystallography.
+Cytoplasm,"The jelly-like matrix within a cell, excluding the nucleus, containing organelles and metabolic machinery."
+Cytosine,"A pyrimidine nitrogenous base (C) found in DNA and RNA, pairing with guanine via three hydrogen bonds."
+Data Cleaning,"A process whereby automated or semi-automated algorithms process experimental data, removing noise, errors, and artifacts to generate high-quality data for subsequent analysis."
+Data Mining,The ability to query very large databases to test hypotheses (top-down) or to discover new hypotheses through statistical correlations (bottom-up).
+Data Processing,"Systematic operations on data—such as handling, merging, sorting, and computing—performed without altering the original semantic content but potentially changing the processed data’s context."
+Data Warehouses,"Vast, heterogeneous collections of biological data stored in a unified logical repository, accessible via multiple querying and manipulation methods."
+Database,"Any file system or organized data repository that stores information following a logical structure, such as relational databases."
+Deconvolution,A mathematical procedure to separate overlapping signals—such as mixed compounds in high-throughput screens or cDNA mixtures on arrays—into their individual components.
+Deletion,A chromosomal alteration in which a portion of DNA is lost.
+Deletion mapping,"The process of creating systematic deletions in a DNA region to identify functionally critical areas, such as the minimal promoter region."
+Dendrogram,"A tree-like diagram representing the output of hierarchical clustering, with all data items at its leaves and internal node heights reflecting clustering metrics."
+Dimer,A molecule formed by the binding of two identical or different subunits (homo- or heterodimers).
+Disulphide bond,"A covalent linkage between the sulfur atoms of two cysteine residues in a protein, stabilizing its folded structure or linking proteins in complexes."
+DNA (deoxyribonucleic acid),"The double-helical molecule composed of complementary strands of nucleotides (A, T, G, C) that encodes genetic information in most organisms."
+DNA fingerprinting,A technique for identifying individuals based on patterns of tandemly repeated DNA sequences revealed by restriction enzyme digestion.
+DNA microarrays,"High-density matrices of oligonucleotides or cDNAs affixed to a substrate, used to monitor gene expression or detect polymorphisms across thousands of genes."
+DNA polymerase,An enzyme that catalyzes the synthesis of a new DNA strand using a DNA template and deoxyribonucleotide precursors.
+DNA probes,"Short, labeled single-stranded DNA molecules used to detect complementary sequences in genes or genomes via hybridization."
+DNA sequencing,The process of determining the exact order of nucleotides in a DNA molecule.
+DNase (deoxyribonuclease),An enzyme that cleaves DNA internally.
+Domain (protein),"A distinct structural or functional region of a protein, often able to fold independently and carry out specific activities."
+Drug,"A chemical agent that affects a biological process, with a molecular structure correlated to its pharmacological activity."
+Drug discovery cycle,"The multi-year process of developing a new drug, encompassing research, preclinical testing, and clinical phases I–III."
+Electronic Northern,"The use of a database of cDNA sequences to compare expression levels by subtracting one dataset from another, identifying mRNAs uniquely expressed in different tissues or conditions."
+Electrophoresis,"The separation of biomolecules by migrating them through a gel matrix under an electric field, based on their size and charge."
+Enhancer,"A DNA sequence that can greatly increase transcription rates of a gene, acting at a distance from the promoter in an orientation- and position-independent manner."
+Enzyme,A protein catalyst that accelerates chemical reactions by binding substrates at its active site and lowering the activation energy under physiological conditions.
+Epigenomics,The study of complex gene expression networks and their spatial and temporal regulation across different tissues and developmental stages.
+Equilibrium constant,A value that quantifies the ratio of product to reactant concentrations at equilibrium for a reversible reaction between two molecular species.
+Eukaryote,An organism whose cells contain a membrane-bound nucleus and specialized organelles.
+Exon,A coding segment within a gene that remains in mature mRNA and specifies part of the polypeptide sequence.
+Expressed Sequence Tag (EST),A short cDNA-derived sequence tag used as a marker of expressed genes and to facilitate cloning and sequencing of full-length transcripts.
+Expression (gene or protein),"The process and measurement of gene product presence and abundance in a cell or tissue over time, at the mRNA or protein level."
+Expression profile,A dataset describing the levels of expression of multiple genes or proteins in a particular cell or tissue under specific conditions.
+Expression vector,"A plasmid or viral vector engineered to produce protein from an inserted cDNA, containing appropriate promoters and regulatory elements."
+Fingerprint,"A set of sequence motifs derived from multiple alignments, used to identify true family members by the presence of all motifs or subfamily members by partial motif sets."
+Frameshift,"A mutation involving insertion, deletion, or duplication of nucleotides that shifts the reading frame of a gene, altering downstream amino acid sequence."
+Functional genomics,"The application of genomic information to determine protein functions, pathways, and networks, often using gene knock-out or knock-in approaches in model organisms."
+Fusion protein,"A chimeric protein created by the genetic joining of two distinct genes, resulting in a single polypeptide with domains from both source proteins."
+Gaps (affine gaps),"Consecutive runs of blanks introduced in sequence alignments to model insertions or deletions; affine gap scoring applies a penalty for opening a gap plus a smaller penalty for each extension, reflecting the likelihood of a single mutation causing a long gap."
+Gap penalties,"Scores subtracted from sequence alignment similarity when opening or extending gaps, balancing the trade-off between matching and introducing indels."
+Gel electrophoresis,"A method for separating molecules such as DNA, RNA, or proteins by size or charge by applying an electric field across a gel matrix."
+Gene Index,"A catalog of all genes in an organism, built by clustering overlapping ESTs into unique gene entries and annotating each cluster’s sequence and features."
+GenBank,A publicly accessible nucleotide sequence database run by the National Center for Biotechnology Information (NCBI) that archives DNA and RNA sequences from many organisms.
+Gene,A hereditary unit consisting of a DNA segment that encodes a functional product (RNA or protein) and its regulatory elements.
+Gene chips (gene arrays),"Glass or silicon substrates bearing thousands of immobilized DNA probes or cDNAs in a grid, used to measure gene expression or genetic variation in parallel."
+Gene expression,"The process by which information in a gene is converted into a functional product, encompassing transcription of DNA to RNA and translation of RNA to protein."
+Gene families,Sets of related genes in a genome that share sequence homology and often encode proteins with similar functions.
+Gene library,"A collection of cloned DNA fragments representing part or all of an organism’s genome, stored in vectors for screening and analysis."
+Gene product,The RNA or protein molecule produced by the expression of a gene.
+Gene therapy,"The introduction or alteration of genetic material in a patient’s cells to treat or prevent disease, often using viral or nonviral delivery vehicles."
+Genetic code,The set of rules by which nucleotide triplets (codons) in mRNA correspond to specific amino acids or stop signals during translation.
+Genetic engineering,"Techniques for modifying an organism’s genome by inserting, deleting, or altering DNA sequences outside the organism and reintroducing them."
+Genetic marker,"A known DNA sequence or gene variant used to identify a specific locus, track inheritance, or differentiate genotypes."
+Genome,"The complete set of genetic material (DNA or RNA) of an organism, including all of its genes and noncoding sequences."
+Genomic DNA (sequence),"DNA extracted directly from an organism’s cells, containing both coding (exons) and noncoding (introns, regulatory) regions."
+Genomics,"The study of the structure, function, evolution, and mapping of genomes through large-scale sequencing and analysis."
+Genotype,"The genetic constitution of an organism, often referring to the specific alleles present at a locus or across the genome."
+Glycosylation,"An enzymatic process that attaches sugar moieties to proteins or lipids, affecting stability, localization, and function."
+Guanine (G),A purine nucleobase found in DNA and RNA that pairs with cytosine via three hydrogen bonds.
+Hairpin,A secondary structure in a single DNA or RNA strand formed when adjacent inverse complementary sequences base-pair to create a stem-loop (hairpin) shape.
+Haploid,"A cell or organism containing a single set of chromosomes, with no homologous pairs (n), as opposed to diploid (2n)."
+Heterodimer,A protein complex composed of two different polypeptide subunits.
+Heteroduplex,"A double-stranded nucleic acid molecule formed by the annealing of two complementary strands from different sources (e.g., DNA–DNA or RNA–DNA) that may contain mismatches."
+Hidden Markov model (HMM),"A statistical model of sequences where observable outputs are generated by hidden states following Markovian transitions, used for sequence alignment, gene prediction, and family modeling."
+High-throughput screening,Automated testing of large libraries of compounds or genetic elements against biological targets in microplate or array formats to identify active candidates.
+HLA complex,"The Human Leukocyte Antigen complex, the human major histocompatibility complex located on chromosome 6, essential for immune recognition."
+Homeobox,"A conserved 180-base-pair DNA sequence encoding a 60-amino-acid homeodomain, found in transcription factors that regulate developmental processes."
+Homeodomain,"A ~60-amino-acid DNA-binding protein domain encoded by a homeobox, crucial for gene regulation during development."
+Homeotic gene,"A gene that controls the development of anatomical structures, mutations in which can cause one body part to develop as another."
+Homology,Similarity between sequences or structures due to shared evolutionary ancestry; assessed by sequence identity or conservative substitutions.
+Housekeeping genes,Genes that are constitutively expressed in most cell types to maintain basic cellular functions.
+Human Anti-Murine Antibody Response (HAMA),"An immune response in humans against murine-derived therapeutic antibodies, reducing their efficacy."
+Hybridization,The specific base-pairing interaction between complementary nucleic acid strands (DNA–DNA or DNA–RNA) used in many molecular assays.
+Hydrogen bond,"A noncovalent interaction between a hydrogen atom bound to an electronegative donor (e.g., N or O) and an electronegative acceptor, critical for nucleic acid and protein structure."
+Hydrophilicity,"The tendency of a molecule to interact with or dissolve in water, often due to polar or charged groups."
+Hydrophobicity,"The tendency of a molecule to repel water and preferentially interact with nonpolar environments, driving folding and membrane association."
+Idiotype,"The unique antigenic determinants located in the variable region (CDRs) of an immunoglobulin molecule, defining the specificity of an antibody."
+Immunoglobulin,"A class of globulin proteins composed of two heavy and two light chains linked by disulfide bonds, functioning as antibodies in the immune response."
+In silico (biology),"The use of computer simulations, modeling, or analysis to perform biological experiments or data interpretation."
+In situ hybridization,A method for detecting specific DNA or RNA sequences directly within fixed cells or tissue sections by hybridizing labeled probes to the endogenous nucleic acids.
+Integration,"The process of inserting exogenous DNA into a host genome, either via site-specific enzymes (e.g., retroviral integrases) or randomly (e.g., transposases)."
+Intracellular signaling,"The cascade of molecular events triggered by receptor activation at the cell surface, transmitting signals via proteins and small molecules to elicit changes in gene expression or cellular behavior."
+Introns,Non-coding nucleotide sequences within eukaryotic genes that are transcribed into pre-mRNA but removed by splicing before translation.
+Isoschizomers,Restriction enzymes from different sources that recognize and cleave the same DNA sequence motif.
+Isozymes,"Different enzyme variants that catalyze the same chemical reaction but differ in amino acid sequence, kinetics, or regulatory properties."
+Iteration,A repetitive computational process in which an algorithm repeatedly applies a set of operations to data until a specified convergence criterion or threshold is met.
+Junk DNA,"Regions of the genome that do not code for proteins or known functional RNA; formerly considered 'excess' DNA, now understood to include regulatory elements and sequences with emerging or unknown functions."
+Karyotype,"The number, size, and shape of chromosomes in a cell or individual, providing a visual profile of an organism’s chromosomal complement."
+Knockout mice (gene targeting),"Mice engineered to inactivate a specific gene via homologous recombination in embryonic stem cells, used to study gene function by observing phenotypic effects of the gene loss."
+Lab on a chip,"A microfabricated device integrating multiple laboratory functions—such as pumps, valves, and detectors—onto a single silicon, glass, or plastic substrate for rapid DNA or protein analysis."
+Lead compound,A promising molecule identified from a screening campaign that binds tightly to a biological target and serves as the starting point for drug development.
+Lead optimization,"The iterative process of chemically modifying a lead compound to improve its potency, selectivity, pharmacokinetics, and safety profile."
+Leucine zipper,"A protein–protein interaction motif in which leucine residues appear at every seventh position, forming an amphipathic α-helix that mediates DNA binding by dimerization of transcription factors."
+Lexicon,"In bioinformatics, a controlled vocabulary or list of terms that defines the permissible entries and annotations within a specific database."
+Library,"A large, organized collection of biological or chemical entities—such as cDNAs, genes, peptides, or small molecules—available for high-throughput screening."
+Ligand,"A small molecule or ion that binds specifically to a protein, receptor, or other macromolecule, often modulating its function."
+Linkage,The genetic phenomenon whereby loci or genes located close together on the same chromosome tend to be inherited together.
+Linkage map,"A genetic map that orders markers or genes along chromosomes based on recombination frequencies, measured in centimorgans."
+Map unit,A measure of genetic distance between two linked genes corresponding to a 1% recombination frequency.
+Markov chain,"A sequence of random variables where each variable depends only on its immediate predecessor, used to model dependencies in ordered data."
+Meiosis,A specialized cell division in germ cells that reduces the chromosome number from diploid to haploid through two sequential divisions.
+Melting (of DNA),"The denaturation of double-stranded DNA into single strands by heat, disrupting hydrogen bonds between bases."
+Messenger RNA (mRNA),A single-stranded RNA transcript carrying genetic information from DNA to ribosomes for protein synthesis.
+Methylation,"The enzymatic addition of a methyl group (–CH₃) to DNA or proteins, often regulating gene expression or protein activity."
+Microarray,A high-density grid of DNA probes on a solid substrate used for parallel analysis of gene expression or genetic variation.
+Microfluidics,The manipulation of fluids in microscale channels for high-throughput biochemical assays and analyses.
+Mimetics,"Molecules designed to mimic the structure and function of endogenous biomolecules, often used as therapeutics."
+Missense mutation,"A point mutation in which one codon is changed to another, resulting in the substitution of one amino acid for another in the protein."
+Mitosis,The process of eukaryotic cell division in which replicated chromosomes are equally distributed into two daughter nuclei.
+Modeling,The use of mathematical or computational frameworks to simulate biological systems or molecular structures.
+Monomer,"A single molecular unit that can join with others to form a polymer, such as an amino acid in a protein."
+Monovalent,Having one binding site or one free electron for bonding.
+Motif,A conserved sequence pattern in DNA or protein that is associated with a specific structural or functional role.
+Multigene family,"A group of related genes derived from a common ancestor by duplication, often with related functions."
+Multiple (sequence) alignment,An arrangement of three or more sequences to identify conserved regions and infer evolutionary or functional relationships.
+Multiplex sequencing,"A sequencing approach that pools multiple DNA samples in a single run, distinguished by unique sample indices."
+Mutagen,An agent—chemical or physical—that increases the rate of mutations in an organism’s DNA.
+Mutation,"An inheritable change in the nucleotide sequence of DNA, ranging from single-base substitutions to large chromosomal alterations."
+Object-Relational Database,"A database system that integrates object-oriented programming concepts with relational database structures, allowing biological entities (e.g., sequences, structures, pathways) to be represented as objects while stored in relational tables."
+Oligonucleotide,"A short chain of nucleotides (typically 10–60 bases) linked by phosphodiester bonds, used as primers, probes, or therapeutic agents in molecular biology."
+Open reading frame (ORF),"A continuous stretch of DNA beginning with a start codon and ending with a stop codon, without any internal stop codons, indicating potential protein-coding sequence."
+Operator,"A DNA regulatory element to which repressor or activator proteins bind, controlling the transcription of adjacent structural genes."
+Operon,"A cluster of genes transcribed as a single mRNA from a shared promoter and regulated by an operator, common in prokaryotic genomes."
+Ortholog,A gene in different species that evolved from a common ancestral gene via speciation and typically retains the same function.
+Overlapping clones,"Sets of cloned DNA fragments whose sequences overlap, used to assemble contiguous genomic regions by aligning and merging these overlapping segments."
+Palindrome,"A DNA sequence that reads the same forward and backward on complementary strands, forming symmetrical recognition sites for restriction enzymes."
+Pattern,"A sequence motif defined with position-specific rules (allowed residues, repeats, exclusions) used to search for functional or structural elements in biomolecules."
+Pathways,"Networks of biochemical reactions and regulatory interactions representing metabolic routes or signaling cascades, modeled and analyzed in bioinformatics."
+Paralog,A gene within the same genome that arose by duplication and may evolve new or specialized functions.
+Parameters,"User-defined values (e.g., gap penalties, match scores, thresholds) that control the behavior and sensitivity of computational algorithms."
+Peptide,"A short polymer of amino acids linked by peptide bonds, typically fewer than 50 residues."
+Peptide bond (amide bond),"The covalent linkage between the carboxyl group of one amino acid and the amino group of another, releasing water."
+Phage (Bacteriophage),A virus that infects bacteria and is used as a cloning or display vector in molecular biology.
+Phage display,"A technique where foreign peptides or proteins are fused to phage coat proteins, displaying them on the virion surface for ligand screening."
+Pharmacogenomics,"The study of how an individual’s genomic variation influences drug response, guiding personalized therapy."
+Pharmacophore,"The spatial arrangement of molecular features (hydrogen bond donors/acceptors, hydrophobic regions) essential for biological activity."
+Phenotype,An observable trait or characteristic of an organism resulting from the interaction of its genotype with the environment.
+Phylum,A high-level taxonomic rank grouping organisms that share a common basic body plan or key characteristics.
+Physical map,"An ordered representation of DNA fragments or markers along chromosomes, measured in base pairs rather than recombination units."
+Plasmid,"A small, circular, extrachromosomal DNA molecule capable of autonomous replication in bacteria, used as a cloning vector."
+Pleiotropy,"The phenomenon where a single gene influences multiple, seemingly unrelated phenotypic traits."
+Point mutation,"A single nucleotide change in DNA, such as a base substitution, insertion, or deletion affecting one position."
+Poly(A) tail,"A stretch of adenine nucleotides added to the 3′ end of eukaryotic mRNA, enhancing stability and translation efficiency."
+Polyadenylation site,A signal in pre-mRNA that directs cleavage and addition of the poly(A) tail during RNA processing.
+Polygenic inheritance,A form of inheritance where multiple genes contribute additive effects to a quantitative trait.
+Polymerase chain reaction (PCR),"A method to exponentially amplify a specific DNA segment using cycles of denaturation, primer annealing, and extension by a thermostable polymerase."
+Polymorphism,"The occurrence of two or more genetic variants at appreciable frequency in a population, such as SNPs or length variations."
+Polypeptide,A single continuous chain of amino acids linked by peptide bonds that folds into a functional protein or domain.
+Positional cloning,A strategy to identify disease genes by mapping their chromosomal location via linkage analysis and then isolating the gene from that region.
+Post-transcriptional modification,"RNA processing events (capping, splicing, editing, polyadenylation) that convert pre-mRNA into mature mRNA."
+Posttranslational modification,"Covalent alterations (phosphorylation, glycosylation, ubiquitination) made to proteins after synthesis, modulating function or localization."
+Primary sequence (protein),The linear order of amino acids in a polypeptide chain.
+Primary structure (protein),See primary sequence; the amino acid sequence of a protein.
+Primer,A short oligonucleotide that provides a free 3′ hydroxyl group for DNA or RNA polymerases to initiate synthesis.
+Probe,A labeled nucleic acid or antibody used to detect complementary sequences or specific proteins in assays.
+Profile,"A position-specific scoring matrix derived from multiple sequence alignments, containing match/mismatch scores and gap penalties for each position."
+Prokaryote,"A unicellular organism lacking a membrane-bound nucleus and organelles, such as bacteria and archaea."
+Promoter (site),A DNA region upstream of a gene where RNA polymerase and transcription factors bind to initiate transcription.
+Protein families,"Groups of evolutionarily related proteins sharing sequence and structural similarities, often performing related functions."
+Proteome,"The complete set of proteins expressed by a cell, tissue, or organism under specific conditions."
+Proteomics,"The large-scale study of proteomes, encompassing protein identification, quantification, modifications, and interactions."
+Purine,"A nitrogenous base with a two-ring structure found in nucleic acids, including adenine and guanine."
+Pyrimidine,"A nitrogenous base with a single-ring structure found in nucleic acids, including cytosine, thymine, and uracil."
+Query (sequence),"A DNA, RNA, or protein sequence used to search a sequence database in order to identify homologous or analogous sequences of known function, from which the function of the query may be inferred."
+Rational drug design (Structure based drug design),The development of therapeutic compounds guided by the three-dimensional molecular structure of the biological target.
+Reading frame,"A series of codons in mRNA, beginning with a start codon and ending with a stop codon, that defines the amino acid sequence of a protein."
+Reagents,Chemical or biological substances used as starting materials or inputs in laboratory protocols and assays.
+Recessive,An allele or trait that is phenotypically expressed only when present in two copies (homozygous) and masked by a dominant allele.
+Recombinant DNA (rDNA),DNA molecules formed by joining genetic material from different sources using molecular cloning techniques.
+Recombination,"The process by which genetic material is rearranged during meiosis or DNA repair, producing new allele combinations."
+Recursion,A programming or algorithmic technique in which a function calls itself repeatedly until a base condition is met.
+Regulatory gene,A gene that encodes a protein which controls the expression of other genes by binding to regulatory DNA sequences.
+Relational Database,"A database organized into tables of rows and columns, using SQL for data definition and manipulation, and supporting views as query results."
+Relational Database Management System (RDBMS),"Software that implements a relational database, providing tools for creating, querying, updating, and managing structured data."
+Repeats (repeat sequences),"DNA sequences that occur multiple times in the genome, including tandem repeats and interspersed elements like Alu."
+Repetitive elements,"Genomic sequences, such as SINEs and LINEs, present in many copies that inform chromosome structure, evolution, and gene regulation."
+Replication,The enzymatic process of copying a DNA molecule to produce two identical DNA strands.
+Repressor,A protein that binds to an operator sequence in DNA to block transcription of adjacent genes.
+Restriction enzyme (restriction endonuclease),An enzyme that recognizes specific DNA sequences and cleaves both strands at or near those sites.
+Restriction fragment length polymorphisms (RFLPs),"Variations in DNA fragment sizes produced by restriction enzyme digestion, used as genetic markers."
+Restriction map,A diagram showing the positions of restriction enzyme cleavage sites along a DNA molecule.
+Reverse Genetics,An approach that starts with a protein or phenotype and works backward to identify or alter the underlying gene.
+Reverse transcriptase,An enzyme that synthesizes complementary DNA (cDNA) from an RNA template.
+Reverse transcriptase-PCR (RT-PCR),A technique combining reverse transcription of RNA into cDNA followed by PCR amplification to detect and quantify transcripts.
+Ribonucleic acid (RNA),"A single-stranded polymer of ribonucleotides (A, U, G, C) that plays roles in gene expression and regulation."
+Secondary structure (protein),"The local organization of a polypeptide backbone into elements such as α-helices and β-pleated sheets, stabilized primarily by hydrogen bonds."
+Selectivity,"In similarity searches, the threshold (e.g., E-value in BLAST) defining which matches are reported, representing the expected number of chance hits in a database scan."
+Sense strand,The DNA strand whose sequence matches the mRNA (with T instead of U) and serves as the coding template for transcription.
+Sensitivity,"The ability of a similarity search algorithm to detect true homologous matches, including low-scoring or distantly related sequences."
+Sequence Tagged Site (STS),"A short, unique DNA sequence of known chromosomal location that can be amplified by PCR and used as a landmark in genomic mapping."
+Sexual PCR (Molecular Diversity),A variant of PCR that recombines similar but nonidentical DNA sequences through iterative cycles of primer extension and denaturation to generate novel variants.
+Shotgun cloning,"The cloning of random DNA fragments generated by partial digestion or shearing into vectors, followed by sequence assembly to reconstruct larger genomic regions."
+Similarity (homology) search,"The process of comparing a query sequence against a database to find related sequences, using statistical methods to infer evolutionary or functional relationships."
+Signal sequence (leader sequence),"A short N-terminal peptide that directs a nascent protein to membranes (e.g., ER) and is typically cleaved off during or after translocation."
+Single nucleotide polymorphisms (SNPs),Single-base variations at specific positions in the genome that occur at appreciable frequency in a population and serve as genetic markers.
+Single-pass sequencing,"Rapid sequencing of cDNA clones from one end (5′ or 3′) in a single read, producing error-prone but high-throughput sequence data for assembly."
+Site,"A specific position in a DNA, RNA, or protein sequence where functional interactions occur (e.g., binding site, cleavage site)."
+Southern blotting,A technique for detecting specific DNA sequences by transferring gel-separated fragments to a membrane and hybridizing with a labeled probe.
+Splice site,"Consensus sequences at exon–intron junctions (e.g., 5′ GU…AG 3′) recognized by the spliceosome for intron removal during pre-mRNA processing."
+Splice form,"An mRNA variant produced from a single gene by alternative splicing, resulting in protein isoforms with different domain compositions."
+Splicing,The enzymatic removal of introns and ligation of exons in a pre-mRNA transcript to produce mature mRNA.
+Solvent accessibility,"The surface area of a residue in a folded protein that is exposed to solvent, informing on potential interaction or modification sites."
+Structural gene,A gene that encodes a protein product rather than a regulatory RNA or transcription factor.
+Structure prediction,"Computational methods for inferring a protein’s secondary, tertiary, or quaternary structure from its amino acid sequence."
+Substitution matrix,A table of scores used in sequence alignment that quantifies the likelihood of one amino acid or nucleotide substituting for another during evolution.
+Subtraction library,A cDNA library enriched for transcripts unique to one sample by hybridizing and removing sequences common to a reference sample.
+Tentative Consensus (TC),"A reconstructed sequence derived from clustering ESTs that represents part or all of a gene, generated by aligning overlapping EST fragments while accommodating sequencing errors, chimeric artifacts, and alternative splicing."
+Tentative Human Consensus sequences (THCs),"Consensus sequences generated from human EST clusters, which are validated by comparison to known human gene or genomic sequences and by identification of open reading frames or characteristic gene features."
+Tertiary structure,"The overall three-dimensional folding of a protein, driven by interactions among side chains including hydrophobic contacts, hydrogen bonds, ionic interactions, and disulfide bonds."
+Thymine,A pyrimidine nucleobase found in DNA (but replaced by uracil in RNA) that pairs with adenine via two hydrogen bonds.
+Tissue,"A collection of closely associated cells of similar type within an organ that perform a specific function, yielding more uniform gene expression profiles."
+Transcript,"A single-stranded RNA molecule synthesized from a DNA template during transcription, representing the primary RNA product prior to processing."
+Transcription,The enzymatic process by which RNA polymerase synthesizes a complementary RNA strand from a DNA template.
+Transcription factors,Regulatory proteins that bind specific DNA sequences near promoters or enhancers to modulate RNA polymerase recruitment and gene transcription.
+Transfer RNA (tRNA),A small RNA molecule with an anticodon loop that recognizes specific codons on mRNA and delivers the corresponding amino acid during translation.
+Transformation,"The genetic alteration of a cell by direct uptake and incorporation of exogenous DNA, or the introduction of DNA into bacterial cells for genetic manipulation."
+Transgene,"A foreign gene introduced into an organism’s genome, often via transgenesis, to study gene function or confer new traits."
+Translation,The process by which ribosomes synthesize a polypeptide chain by decoding the mRNA sequence into amino acids using tRNAs.
+Transmembrane region,"A segment of a membrane protein that spans the lipid bilayer, typically composed of hydrophobic amino acids forming an α-helix or β-strand to anchor the protein."
+Unidentified reading frame (URF),An open reading frame that encodes a putative protein of unknown function.
+Uracil,"A pyrimidine nitrogenous base found in RNA, where it pairs with adenine, replacing thymine used in DNA."
+Variable numbers of tandem repeats (VNTRs),"Blocks of DNA sequence (2–60 bp) repeated consecutively from two to over 20 times, exhibiting length polymorphism useful as genetic markers for mapping, linkage analysis, and DNA fingerprinting."
+Variation (genetic),"Differences in DNA sequence among individuals or populations; genome-wide detection of variants (e.g., SNPs, indels, VNTRs) informs population history, marker density for mapping, and genotype–phenotype associations."
+Vector,"An agent, often a plasmid or virus, used to transfer genetic material into a host cell for cloning, expression, or genome engineering."
+Virtual libraries,"Electronic collections of molecular structures stored in databases, which can be queried or docked in silico against targets prior to synthesis and experimental testing."
+Visualization,The process of converting abstract scientific or bioinformatics data into graphical or image-based representations to facilitate interpretation and insight.
+Weight matrix,"A position-specific scoring matrix derived from known binding site frequencies, assigning weights to each nucleotide or amino acid at each position for motif detection."
+Western blot,"An assay in which proteins separated by electrophoresis are transferred to a membrane and probed with specific antibodies, with detection by labeled secondary antibodies."
+Wild type,"The allele, genotype, or phenotype most commonly found in a natural population, serving as the reference standard."
+X chromosome,"The sex chromosome present in two copies in homogametic individuals (e.g., human females) and one copy in heterogametic individuals (e.g., human males)."
+Yeast 2-hybrid system,A genetic assay in yeast where two protein domains (DNA‐binding and activation) are fused to a ‘bait’ protein and library proteins (‘prey’); interaction reconstitutes transcription of a reporter gene.
+Z-DNA,"A left-handed DNA conformation with a zigzag sugar–phosphate backbone, implicated in gene regulation and chromatin dynamics."
+Zinc fingers,"Protein motifs in which cysteine and histidine residues coordinate a zinc ion, forming finger-like loops that bind specific DNA sequences, commonly in transcription factors."
+High-Performance Computing (HPC),The use of supercomputers and parallel processing techniques to solve complex computational problems by distributing tasks across many processors or nodes.
+Parallel Computing,"A computational paradigm in which multiple calculations or processes are carried out simultaneously, often using multi-core CPUs or distributed clusters to accelerate data-intensive tasks."
+Cloud Computing,"On-demand delivery of compute, storage, and networking resources over the internet, allowing scalable, pay-as-you-go infrastructure for bioinformatics workflows."
+Containerization,"Packaging applications and their dependencies into lightweight, portable containers (e.g., Docker) to ensure reproducible execution across different computing environments."
+Workflow Pipeline,A defined sequence of data processing steps—often managed by a workflow engine—automating the execution of bioinformatics analyses from raw data to results.
+Database Indexing,"A data structure (e.g., B-tree or hash index) that improves the speed of data retrieval operations on a database table at the cost of additional storage and maintenance overhead."
+NoSQL Database,"A non-relational database system (e.g., key-value stores, document stores, graph databases) optimized for large-scale, unstructured, or semi-structured biological data."
+Application Programming Interface (API),"A set of protocols and definitions that allow software components to communicate, enabling programmatic access to bioinformatics tools, databases, or services."
+Version Control,"Systems (e.g., Git) that track and manage changes to code, documents, or data, supporting collaborative development and reproducibility in computational projects."
+Regular Expression,"A sequence of characters defining a search pattern used for string matching and manipulation in text processing, such as parsing FASTA or VCF files."
+GPU Acceleration,"Leveraging graphics processing units (GPUs) to perform parallel computations, greatly speeding up algorithms such as sequence alignment or neural network training."
+Container Orchestration,"Automated management of multiple containers at scale using systems like Kubernetes, enabling resilient, distributed bioinformatics pipelines."
+RESTful API,"An architectural style for web services that uses standard HTTP methods (GET, POST, PUT, DELETE) to expose resources identified by URLs, enabling stateless, scalable communication between clients and servers."
+Microservices,"A software design approach where an application is composed of small, independent services that communicate over lightweight protocols, improving modularity and allowing independent deployment and scaling."
+Virtual machine,"A software emulation of a physical computer, complete with its own operating system and virtualized hardware, allowing isolation and reproducible environments for bioinformatics tools."
+Message Passing Interface (MPI),"A standardized and portable library specification for passing messages between nodes in a high-performance computing cluster, enabling parallel execution of tasks."
+Multithreading,"A programming technique that allows multiple threads—lightweight subprocesses—to execute concurrently within a single process, sharing memory to accelerate computation."
+Load balancing,"The distribution of incoming computational tasks or network traffic across multiple servers or processes to optimize resource use, minimize response time, and prevent overload."
+Scalability,"The ability of a system or application to increase its capacity (throughput or size) by adding resources such as CPUs, memory, or nodes without significant redesign."
+Continuous Integration/Continuous Deployment (CI/CD),"A set of practices and tools that automate code integration, testing, and deployment, enabling rapid delivery of reliable bioinformatics software."
+FAIR data principles,"Guidelines to make data Findable, Accessible, Interoperable, and Reusable, ensuring that bioinformatics datasets can be efficiently shared and integrated."
+Data provenance,"Metadata that records the origins, lineage, and processing history of data, providing transparency and reproducibility in computational analyses."
+Profiling,"The process of measuring the performance of a program (e.g., CPU usage, memory allocation, I/O operations) to identify bottlenecks and optimize code."
+Benchmarking,The systematic evaluation of software performance by running standardized tests and comparing results against defined metrics or other implementations.
+Suffix array,"A space‐efficient data structure that stores the starting positions of all suffixes of a string in sorted order, enabling fast substring queries."
+FM-index,"A compressed full-text index based on the Burrows–Wheeler transform, allowing fast substring searches with low memory usage."
+Bloom filter,"A probabilistic data structure for set membership testing that can quickly tell if an element is definitely not in the set or possibly in it, used in k-mer counting and sequence de-duplication."
+k-mer spectrum,"The distribution of all substrings of length k in a sequence dataset, used to assess coverage, error rates, and genome characteristics."
+De Bruijn graph,"A graph whose nodes represent (k–1)-mers and edges represent k-mers, used to reconstruct genomes from sequencing reads by traversing overlaps."
+MinHash sketch,A dimensionality-reduction technique that creates compact fingerprints of large datasets (like genomes) to estimate similarity quickly.
+Variant Calling Pipeline,"A modular workflow (often using tools like BWA, GATK, and Samtools) that aligns reads, recalibrates base quality, and identifies SNPs/indels against a reference."
+Workflow engine,"A system (e.g., Nextflow, Snakemake) that manages and executes bioinformatics pipelines as directed acyclic graphs of tasks with defined inputs, outputs, and dependencies."
+BAM/CRAM,"Binary formats for storing aligned sequencing reads (BAM) or their compressed equivalents (CRAM), enabling efficient indexing and retrieval."
+VCF (Variant Call Format),"A standardized tabular format for representing genomic variants (SNPs, indels, structural variants) along with annotations and sample genotypes."
+Suffix array,"A space-efficient index that stores all starting positions of suffixes of a text in sorted order, enabling fast substring searches."
+FM-index,"A compressed full-text index built on the Burrows–Wheeler transform, allowing fast exact and approximate string matching with low memory overhead."
+Bloom filter,"A probabilistic data structure for set membership tests that can quickly rule out absent elements, used in k-mer counting and de-duplication."
+k-mer spectrum,"The distribution of all substrings of length k in a sequencing dataset, used to assess genome size, coverage, and error profiles."
+De Bruijn graph,"A graph whose nodes represent (k–1)-mers and edges represent k-mers, used to assemble genomes by finding Eulerian paths."
+MinHash sketch,"A compact probabilistic representation of a set that allows fast estimation of Jaccard similarity, applied to compare large genomic datasets."
+Variant Calling Pipeline,"A modular workflow that aligns reads to a reference, performs quality recalibration, and identifies SNPs and indels, typically using tools like BWA, GATK, and SAMtools."
+Workflow engine,"Software (e.g., Nextflow, Snakemake, CWL) that manages and executes complex bioinformatics pipelines by tracking task dependencies and data flow."
+BAM/CRAM,"Binary formats for storing aligned sequencing reads (BAM) and their compressed equivalents (CRAM), enabling indexed, random access to large datasets."
+VCF (Variant Call Format),"A standardized text format for representing genomic variants—such as SNPs, indels, and structural variants—along with annotations and genotypes."
+Suffix tree,"A compressed trie of all suffixes of a given string, enabling linear-time substring queries and common substring detection."
+Dynamic programming,"An optimization strategy that breaks problems into overlapping subproblems, storing intermediate results to efficiently solve tasks like sequence alignment."
+Needleman–Wunsch algorithm,A global sequence alignment method using dynamic programming to find the optimal alignment over entire sequences.
+Smith–Waterman algorithm,A local sequence alignment algorithm employing dynamic programming to identify the best matching subsequences between two strings.
+Bit score,"A normalized measure of alignment quality, reflecting the raw score’s statistical significance independent of database size."
+E-value,The expected number of alignments with a given score (or better) occurring by chance in a database search.
+Bayesian network,A probabilistic graphical model representing a set of variables and their conditional dependencies via a directed acyclic graph.
+Markov chain Monte Carlo (MCMC),A class of algorithms for sampling from probability distributions based on constructing a Markov chain that has the desired distribution as its equilibrium.
+Hidden Markov Model (HMM) profile,"A statistical representation of a sequence family built by estimating HMM parameters from a multiple sequence alignment, used for sensitive homology searches."
+Suffix array,"An array of starting positions of all suffixes of a string sorted in lexicographical order, supporting efficient pattern matching."
+Alu,A family of approximately 300 bp interspersed repeat elements found throughout the human genome; nearly every 100 kb of human DNA contains one or more Alu sequences.
+Base Analogue,"A chemical compound structurally similar to a normal DNA base that can be incorporated into DNA, potentially causing mutations or used in modified PCR/sequencing reactions."
+Bioinformatics,"The discipline of acquiring, storing, and analyzing biological sequence data (DNA, RNA, protein) using computational tools to infer function, structure, and relationships."
+BLAST,"A suite of programs for rapid sequence similarity searches: BLASTN compares nucleotide queries to nucleotide databases, BLASTP compares proteins, and statistical models assess match significance."
+BLAST2,"An enhanced BLAST release that supports gapped alignments, allowing insertions and deletions in alignments for more biologically relevant matches."
+cDNA,"Complementary DNA synthesized from mRNA templates by reverse transcription, representing only expressed (exonic) sequences in a given tissue."
+CDS,"Coding sequence: the portion of a gene’s DNA or RNA that is translated into protein, bounded by start and stop codons."
+Clone,A population of genetically identical cells or DNA molecules derived from a single progenitor.
+Cloning Vector,"A DNA molecule (e.g., plasmid, cosmid, phagemid, YAC, PAC) engineered to carry and replicate foreign DNA in a host organism."
+Consensus Sequence,A derived sequence representing the most common nucleotide (or amino acid) at each position across a family of aligned sequences.
+Contig,A contiguous stretch of DNA sequence assembled from overlapping sequencing reads or fragments.
+DNA Sequencing,"Experimental methods (e.g., Sanger, NGS) for determining the nucleotide order of a DNA fragment."
+Downstream,"In a DNA sequence, towards the 3′ end from a reference point (e.g., transcription start site)."
+EMBL,The European Molecular Biology Laboratory database: a major public repository of nucleotide sequences.
+EMBnet,The European Molecular Biology Network: provides distributed molecular biology database mirrors and software tools across Europe.
+EST,"Expressed Sequence Tag: a short, single-pass sequence read from cDNA used as a marker of gene expression."
+Exon,A segment of a gene’s DNA or RNA that remains in the mature mRNA after intron removal and encodes protein.
+HGMP,Human Genome Mapping Project: a UK-based resource center providing genomic databases and software for academic users.
+Intron,A non-coding sequence within a eukaryotic gene that is transcribed but spliced out of the pre-mRNA.
+MMDB,"Molecular Modeling Database: a curated repository of 3D structure data derived from the PDB, with taxonomy and annotation."
+NCBI,National Center for Biotechnology Information (USA): maintains GenBank and other biological databases and provides bioinformatics tools.
+NIH,"National Institutes of Health (USA): oversees biomedical research, including funding and infrastructure like NCBI."
+OMIM,Online Mendelian Inheritance in Man: a comprehensive catalog of human genes and genetic disorders.
+ORF,Open Reading Frame: a DNA sequence bounded by start and stop codons that potentially encodes a protein.
+Orthologue,A gene in different species that evolved from a common ancestral gene by speciation and retains the same function.
+PDB,Protein Data Bank: a repository of experimentally determined 3D structures of proteins and nucleic acids.
+PIR,Protein Information Resource: a protein sequence database organized into annotated (PIR1–2) and unverified (PIR3–4) entries.
+Redundancy,The presence of identical sequences multiple times in a database; non-redundant databases remove or consolidate these duplicates.
+Sequence Tagged Site,"A short, unique DNA sequence at a known genomic location that can be PCR-amplified for mapping and cloning."
+STS,Sequence Tagged Site: synonym for Sequence Tagged Site (see above).
+SWISS-PROT,"A high-quality, non-redundant protein sequence database with manual annotation and cross-references; TrEMBL is its automatically annotated complement."
+TrEMBL,Translated EMBL: an automatically annotated supplement to SWISS-PROT containing protein translations of EMBL nucleotide entries.
+UniGene,"An NCBI database clustering transcripts (GenBank, dbEST) by gene to represent unique human genes."
+Upstream,"In a DNA sequence, towards the 5′ end from a reference point (e.g., transcription start site)."
+Allele,"A variant form of a genetic locus; individuals carry up to two alleles per gene, one on each homologous chromosome."
+Antisense strand,The DNA strand complementary to the sense (coding) strand; serves as the template for RNA polymerase during transcription.
+Base pair,Two complementary nucleotides (A–T or G–C in DNA; A–U or G–C in RNA) on opposite strands held together by hydrogen bonds.
+Central dogma of molecular biology,"The unidirectional flow of genetic information: DNA is transcribed into RNA, which is translated into protein."
+Coding sequence (CDS),"The contiguous series of codons in DNA or mRNA that is translated into a polypeptide, excluding introns and untranslated regions."
+Coding strand,Also called the sense strand; the DNA strand whose sequence matches the mRNA transcript (with T in place of U).
+Codon,A triplet of nucleotides in mRNA that specifies a particular amino acid or a translation stop signal.
+Complex variant,"A genomic alteration involving multiple simultaneous mutation types (e.g., substitution plus insertion/deletion) at a single locus."
+Deletion,Loss of one or more bases from a DNA sequence.
+Exon,The segment(s) of a transcript that remain in the mature RNA after splicing and are translated (or form functional RNA).
+Gene,"A unit of heredity defined by specific start and stop coordinates on the genome; transcribed into RNA, and in many cases translated into protein."
+HDR donor template,"A single- or double-stranded DNA sequence containing a desired insert flanked by homology arms, used in CRISPR-Cas9 experiments to direct homology-directed repair."
+Homology-directed repair (HDR),A cellular pathway for repairing double-strand breaks by recombining a homologous donor DNA sequence into the genome.
+Indel,A genomic variant where bases have been inserted or deleted relative to a reference sequence.
+Insertion,Addition of one or more extra bases into a DNA sequence.
+Intron,The segment(s) of a primary RNA transcript that are removed during splicing and not present in the mature RNA.
+MNP (Multi Nucleotide Polymorphism),A variant in which multiple adjacent nucleotides are substituted simultaneously at the same locus.
+Mutation,"Any change in a DNA sequence, including insertions, deletions, single nucleotide polymorphisms (SNPs), multi‐nucleotide polymorphisms (MNPs), and complex variants."
+Non-coding strand,The DNA strand complementary to the coding (sense) strand; serves as the template for RNA synthesis.
+Nucleotide,"The basic building block of nucleic acids, consisting of a pentose sugar (ribose or deoxyribose), a nitrogenous base (purine or pyrimidine), and one or more phosphate groups."
+Oligo (Oligonucleotide),"A short synthetic chain of nucleotides, typically used as primers or probes in molecular biology assays."
+Open reading frame (ORF),"A contiguous stretch of codons in an RNA or DNA sequence, beginning with a start codon and ending with a stop codon, that potentially encodes a protein."
+Protein,"A polymer of amino acids linked by peptide bonds, folded into a specific three-dimensional structure and encoded by an mRNA transcript."
+Reverse complement,"The sequence obtained by reversing a DNA strand and replacing each base with its complement (A↔T, C↔G), written in the 5′→3′ orientation."
+Sense strand,The DNA strand whose sequence matches the mRNA transcript (with T in place of U) and is not used as the template during transcription.
+SNP,Single Nucleotide Polymorphism: a single‐base change at a genetic locus present in more than 1% of a population.
+Splicing,The enzymatic removal of introns from a precursor mRNA transcript to produce a mature mRNA.
+ssDNA,Single‐stranded DNA.
+ssODN,"Single‐stranded oligodeoxynucleotide, often used as an HDR donor template in CRISPR‐Cas9 genome editing."
+Start codon,The codon (most commonly AUG) that signals the beginning of translation on an mRNA transcript.
+Stop codon,"A codon (UGA, UAA, or UAG) that signals termination of translation on an mRNA."
+Synonymous SNP,A single nucleotide polymorphism that does not alter the encoded amino acid.
+Transcript,"An RNA molecule transcribed from DNA, comprising exons (and sometimes introns) and untranslated regions."
+UTR,Untranslated region: the 5′ or 3′ sequence of an mRNA that is not translated but may contain regulatory elements.
++ strand,"The reference DNA strand designated as the “plus” strand in bioinformatic analyses, distinct from sense/antisense; coordinates and features are often reported relative to this strand."
+− strand,"The complement of the + strand in the reference genome, used in bioinformatic contexts to denote the opposite strand independently of sense/antisense designations."
+1-based vs. 0-based coordinates,"Two indexing conventions for sequence positions: in 1-based, the first nucleotide or amino acid is position 1; in 0-based, the first position is 0 (so position 0 refers to the base before the first nucleotide). Common file formats: GFF, SAM, VCF use 1-based; BED, BAM use 0-based."
+Annotation file,"A formatted text file (e.g., BED, GTF, GFF) that describes genomic features such as exons, transcripts, coding regions, UTRs, and regulatory elements within a reference genome."
+FASTA file,"A text file format for storing nucleotide or protein sequences, where each entry begins with a description line starting with “>”, followed by the sequence on subsequent lines."
+GenBank database,"A public repository maintained by NCBI containing all submitted nucleotide sequences, often with associated annotation and protein translations, which may include redundant entries."
+Gene symbol,"A standardized short abbreviation for a gene name approved by nomenclature committees (e.g., HPRT1 for hypoxanthine phosphoribosyltransferase 1) to ensure consistent communication."
+Genomic coordinate (interval),"A specification of a location or range in a reference genome, including chromosome name, start position, end position, and strand, using either 0-based or 1-based indexing."
+HGVS nomenclature,"The Human Genome Variation Society’s standardized system for describing sequence variants (e.g., NM_001129765.1:c.696_698del) unambiguously."
+NCBI accession number,"A unique alphanumeric identifier assigned by NCBI to a specific nucleotide or protein record (e.g., NM_000194.3), used to reference database entries."
+Reference genome,A representative collection of DNA sequences for a species (reference assembly) used as the baseline for mapping reads and calling variants.
+RefSeq (Reference Sequence database),"A curated subset of GenBank that provides non-redundant, well-annotated reference DNA, RNA, and protein sequences for genomes."
+Variant Call Format (VCF) file,A text file format that lists genomic variants (positioned using 1-based coordinates) along with reference and alternate allele sequences and annotations.
+Variant files,"Text files (e.g., VCF) that record genomic variants with specific formatting, including sequence change, genomic location, and experimental metadata such as genotype quality, strand bias, and allele frequency."
+Advanced Molecular Detection (AMD),"The use of cutting-edge molecular technologies, such as high-throughput sequencing and real-time PCR, for pathogen surveillance and public health applications."
+Cis regulation,"Regulation of gene expression by DNA elements (e.g., promoters, enhancers) located on the same molecule as the target gene."
+Trans regulation,"Regulation of gene expression by factors (e.g., transcription factors, miRNAs) encoded elsewhere in the genome that act on target genes on different DNA molecules."
+Mobile elements,"DNA sequences capable of moving within or between genomes, including transposons, plasmids, and bacteriophages, often contributing to genome plasticity."
+Mutation rate,"The frequency at which new mutations (e.g., point substitutions) arise in a genome per generation or per nucleotide site per replication cycle."
+Recombination,"The genetic process by which segments of DNA are rearranged or exchanged between molecules, creating new allele combinations."
+Structural variant,"A genomic alteration ≥50 bp in size, such as large insertions, deletions, inversions, duplications, or translocations."
+BASH/Shell Script,"A sequence of commands written for the Unix shell (BASH) to automate tasks, file manipulation, and pipeline execution in bioinformatics."
+Command line,A text-based interface for interacting with an operating system or software by typing commands rather than using a graphical user interface.
+Linux,An open-source Unix-like operating system widely used in bioinformatics for its powerful command-line tools and scripting capabilities.
+PERL,A high-level scripting language popular in early bioinformatics for text processing and pipeline development.
+Python,"A versatile, high-readability programming language with extensive libraries (e.g., Biopython) for bioinformatics analysis and automation."
+PacBio (SMRT sequencing),"A single-molecule, real-time sequencing technology by Pacific Biosciences that generates long reads (>10 kb) for de novo assembly and epigenetic studies."
+TapeStation,"An Agilent microfluidics-based platform for automated sizing, quantification, and quality control of DNA and RNA samples."
+Pyrosequencing,A sequencing-by-synthesis method detecting pyrophosphate release via light emission to determine the nucleotide sequence.
+Long-read sequencing,"Third-generation sequencing methods (e.g., PacBio, Oxford Nanopore) that produce reads thousands of bases long, improving assembly and structural variant detection."
+Short-read sequencing,"High-throughput sequencing technologies (e.g., Illumina, Ion Torrent) that generate millions of reads 50–300 bp long for variant calling and transcriptomics."
+Massively parallel sequencing (MPS),"Next-generation sequencing approaches that sequence millions to billions of DNA fragments in parallel, enabling whole-genome and transcriptome analyses."
+Base calling,"The computational step in sequencing workflows that converts raw signal data (e.g., fluorescence intensities) into discrete nucleotide sequences and Q-scores."
+Adapter,Synthetic oligonucleotides ligated to DNA fragments in a sequencing library to provide priming sites and platform-specific binding motifs.
+Barcode sequences,"Short, unique DNA tags added to sequencing libraries to enable multiplexing by distinguishing reads from different samples."
+Sanger sequencing,First-generation DNA sequencing method using chain-terminating dideoxynucleotides to generate labeled fragment lengths that reveal the sequence.
+ANI (Average Nucleotide Identity),"A metric for quantifying the average nucleotide-level similarity between two genome sequences, typically used to delineate bacterial species."
+Coverage,"The number of sequencing reads that align to a given nucleotide position or region of the genome, indicating the depth of sequencing."
+Contig,A contiguous DNA sequence assembled from overlapping sequencing reads into a consensus segment without gaps.
+De novo assembly,"The process of reconstructing a genome from sequencing reads without using a reference, by overlapping and merging reads into contigs and scaffolds."
+CgMLST (Core genome MLST),"A typing method that assigns allele codes only to genes shared by the majority of strains in a genus, enabling high-resolution comparison based on the core genome."
+MLST (Multi Locus Sequence Typing),A genotyping approach using sequence variation in 6–12 housekeeping genes to assign alleles and define sequence types (STs) for strain characterization.
+WgMLST (Whole genome MLST),"An extension of MLST that examines all genes in a genome, assigning allele codes per locus (whole or partial gene) to generate a comprehensive strain type."
+Consensus,"A sequence representing the most frequent nucleotide observed at each position, derived by aligning raw sequencing reads or sequences."
+Reference assembly,"Aligning sequencing reads to a reference genome to assemble reads into contigs or closed genomes, leveraging known sequence context."
+Reference genome,"A representative, high-quality consensus sequence of an organism’s genome used as a standard for read mapping and variant calling."
+Variant,"A position or region in a genome where one or more sequences differ from the reference, including SNPs, indels, and structural changes."
+Allele,One of multiple sequence variants at a genetic locus; allelic variation does not necessarily impact phenotype.
+SNP (Single Nucleotide Polymorphism),"A single‐base substitution at a genomic position present at appreciable frequency in a population, used as a strain or trait marker."
+HqSNP (High-Quality SNP),"A variant call with stringent criteria (e.g., ≥20× coverage, high base and mapping quality) identified by tools such as Lyve-SET."
+Query sequence,"A DNA or protein sequence submitted to a search algorithm (e.g., BLAST) to find similar subject sequences in a database."
+FASTQ file,"A text file format containing raw sequencing reads, each with an identifier, nucleotide sequence, separator, and per-base quality scores."
+FASTA file,"A text file format for storing one or more sequences, each starting with a header line beginning with “>” followed by sequence lines."
+SAM file,A tab-delimited text format (Sequence Alignment/Map) that records the alignment of sequencing reads to a reference genome.
+BAM file,"The binary, compressed version of a SAM file, enabling efficient storage, indexing, and retrieval of aligned sequencing reads."
+FastQC,"A quality-control tool that generates summary statistics and visualizations for raw sequencing reads, including per-base quality scores, adapter content, and duplication levels."
+Trim Galore,A wrapper around Cutadapt and FastQC that automates adapter trimming and quality filtering of sequencing reads.
+BWA,Burrows–Wheeler Aligner: a fast read-mapping program that aligns short sequencing reads to a reference genome using the Burrows–Wheeler transform.
+SAMtools,"A suite of utilities for manipulating alignments in SAM/BAM format, including sorting, indexing, variant calling, and format conversion."
+GATK,Genome Analysis Toolkit: a software package for variant discovery and genotyping that implements best-practice pipelines for SNP and indel calling.
+Bedtools,"A collection of command-line tools for genome arithmetic, allowing operations like intersection, coverage calculation, and feature manipulation on BED/GFF/GTF files."
+MultiQC,"A reporting tool that aggregates and visualizes results from multiple bioinformatics analyses (e.g., FastQC, aligners) into a single interactive report."
+Conda environment,"An isolated, reproducible software environment managed by Conda, used to install and manage bioinformatics tool dependencies without conflicts."
+Docker image,"A portable containerized package that includes an application and its dependencies, ensuring consistent execution across computing environments."
+SLURM,Simple Linux Utility for Resource Management: an open-source job scheduler used to allocate compute resources and manage batch jobs on HPC clusters.
+FeatureCounts,"A read-counting program that quantifies how many sequencing reads overlap genomic features (e.g., genes, exons) for RNA-Seq expression analysis."
+DESeq2,"An R package for differential expression analysis of count data, using shrinkage estimators for dispersion and fold changes to improve stability."
+Principal Component Analysis (PCA),"A dimensionality-reduction technique that projects high-dimensional data (e.g., gene expression) onto orthogonal axes capturing maximal variance."
+Workflow management system,"Software (e.g., Nextflow, Snakemake) that defines, executes, and tracks complex bioinformatics pipelines with reproducible task orchestration."
+Version control (Git),"A system for tracking changes to code and documents (e.g., Git), enabling collaborative development and the ability to revert to previous versions."
+Cadre de lecture non identifié (URF),Un cadre de lecture ouvert codant pour une protéine de fonction indéfinie.
+Navigateur de génomes de l'UCSC,Un navigateur de génome multi-espèces hébergé à l’Université de Californie à Santa Cruz (http://genome.ucsc.edu/).
+En amont,Vers l’extrémité 5′ d’une séquence d’ADN ou d’un gène d’intérêt.
+UTR,"Région non traduite transcrite et présente dans l’ARNm mature mais non traduite en protéine, située aux extrémités 5′ et/ou 3′ d’un transcript."
+UniChem,Base de données non redondante à grande échelle contenant des liens entre identifiants de structures chimiques.
+UniProt,"Ressource universelle sur les protéines, catalogue central de séquences et de fonctions protéiques, incluant UniProtKB/Swiss-Prot, UniProtKB/TrEMBL et PIR."
+UniParc,"Base de données non redondante de séquences protéiques publiques, où chaque séquence est stockée avec un identifiant UniParc unique."
+UniMES,"Base de données UniProt Metagenomic and Environmental Sequences, dédiée aux données métagénomiques et environnementales."
+Base de connaissances UniProt,"Point d’accès central à une vaste collection d’informations sur les protéines, incluant fonction, classification et références croisées (www.uniprot.org)."
+UniProt-GOA,"Base d’annotations de l’ontologie du gène (GOA) de UniProt, fournissant des annotations GO manuelles et électroniques de haute qualité."
+UniProtKB,"UniProt Knowledgebase, base centrale d’informations organisées et complètes sur les protéines, incluant fonction, classification et références croisées."
+UniProtKB/Swiss-Prot,"Section manuellement annotée et non redondante de UniProtKB, fournissant des entrées de haute qualité avec données expérimentales et conclusions scientifiques."
+UniProtKB/TrEMBL,"Complément annoté par ordinateur de Swiss-Prot, contenant les traductions de CDS issues de EMBL/GenBank/DDBJ et enrichi par annotation automatisée."
+UniRef,"Bases de données groupant les séquences de UniProtKB (variants d’épissage, isoformes, UniParc) pour couvrir l’espace protéique tout en réduisant la redondance."
+Uracile,Base pyrimidique azotée présente dans l’ARN mais absente de l’ADN.
+USPTO,"Office des brevets et des marques des États-Unis, agence du Département du Commerce protégeant par brevets et marques les inventions et entreprises."
+Épissage alternatif,"Processus par lequel différents exons d’un même précurseur d’ARNm sont combinés de manières variées, générant plusieurs isoformes protéiques à partir d’un même gène."

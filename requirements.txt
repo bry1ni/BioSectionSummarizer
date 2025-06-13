@@ -1,0 +1,6 @@
+agno>=1.6.0
+langchain-text-splitters>=0.3.8
+mistralai>=1.8.2
+pandas>=2.3.0
+pillow>=11.2.1
+streamlit>=1.45.1
